@@ -173,15 +173,12 @@ section{ position: relative; }
   padding: 42px 36px;
   text-align:center;
 }
-.discord-cta .discord-icon{
-  width: 52px; height:52px;
-  margin: 0 auto 18px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--gold-pale), var(--white));
-  border: 1px solid var(--glass-border);
-  display:flex; align-items:center; justify-content:center;
+.btn-discord{
+  background: linear-gradient(135deg, #7289da, #5865f2);
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(88,101,242,0.35);
 }
-.discord-cta .discord-icon svg{ width:26px; height:26px; color: var(--gold); }
+.btn-discord:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(88,101,242,0.45); }
 .discord-cta h2{
   font-family: var(--font-display);
   font-size: 1.5rem;
