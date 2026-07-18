@@ -113,6 +113,83 @@ section{ position: relative; }
   pointer-events: none;
 }
 
+/* ---------- announcement bar ---------- */
+.announcement-bar{
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: #fffdf8;
+  position: relative;
+  z-index: 110;
+}
+.announcement-bar .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 14px;
+  padding: 11px 44px 11px 20px;
+  min-height: 0;
+  position: relative;
+  text-align:center;
+  flex-wrap: wrap;
+}
+.announcement-bar p{
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.announcement-bar strong{ font-weight: 600; }
+.announcement-bar a.pill-link{
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration:none;
+  color: var(--umber);
+  background: #fffdf8;
+  padding: 5px 14px;
+  border-radius: 999px;
+  transition: transform .25s ease;
+}
+.announcement-bar a.pill-link:hover{ transform: translateY(-1px); }
+.announcement-close{
+  position:absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fffdf8;
+  opacity: 0.75;
+  cursor: pointer;
+  width: 22px; height: 22px;
+  display:flex; align-items:center; justify-content:center;
+}
+.announcement-close:hover{ opacity: 1; }
+.announcement-close svg{ width: 16px; height:16px; }
+
+/* ---------- discord cta ---------- */
+.discord-cta{
+  margin-top: 24px;
+  padding: 42px 36px;
+  text-align:center;
+}
+.discord-cta .discord-icon{
+  width: 52px; height:52px;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--gold-pale), var(--white));
+  border: 1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+}
+.discord-cta .discord-icon svg{ width:26px; height:26px; color: var(--gold); }
+.discord-cta h2{
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.discord-cta p{ color: var(--ink-soft); max-width: 52ch; margin: 0 auto 24px; }
+
 /* ---------- nav ---------- */
 .site-nav{
   position: sticky;

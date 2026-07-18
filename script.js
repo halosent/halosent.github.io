@@ -2,6 +2,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // announcement bar dismiss
+  const bar = document.getElementById('announcementBar');
+  const closeBtn = document.getElementById('announcementClose');
+  if (bar && closeBtn) {
+    if (localStorage.getItem('lo_announcement_dismissed') === 'true') {
+      bar.style.display = 'none';
+    }
+    closeBtn.addEventListener('click', () => {
+      bar.style.display = 'none';
+      localStorage.setItem('lo_announcement_dismissed', 'true');
+    });
+  }
+
   // mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
