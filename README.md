@@ -1,22 +1,38 @@
 # Live Orthodox
 
-**Live Orthodox** is a Christian debate site built around two kinds of conversation.
+A Christian debate site where common objections to Scripture are answered directly, and the deeper metaphysical questions behind belief get equal attention. Maintained by Unified, an Eastern Orthodox Christian.
 
-The first is the familiar one: the handful of objections to Scripture that come up again and again online, the two creation accounts in Genesis, the two genealogies of Christ, the manner of Judas' death, the problem of evil, and so on. These are addressed directly and in full, on the assumption that they deserve a real answer rather than a dismissal.
+## Viewing the site
 
-The second is the one the site actually cares more about. Behind most contradiction debates sits a deeper argument about metaphysics: whether God exists, what kind of God he would have to be, how freedom and foreknowledge relate, how a simple and unchanging God can still be genuinely present and known. That is where most of the site's energy goes.
+No server or build step is required. Just open `index.html` in a browser.
 
-## Who runs it
+The only requirement is that all the files below stay together in the same folder. The pages link to `style.css` and `script.js` using relative paths, so if those files are separated from the HTML, the site will load as plain unstyled text.
 
-The site is maintained by **Unified**, an Eastern Orthodox Christian. The approach leans on classical theism and the Orthodox theological tradition specifically, including writers like St. Gregory Palamas and St. Maximus the Confessor, rather than generic apologetics. Comparative religion polemics are intentionally not the focus; the interest is in first causes and hard questions, not in scoring points against other traditions.
+## Files
 
-## What's on the site
+```
+live-orthodox/
+├── index.html      Home page
+├── about.html       About Unified
+├── articles.html    Essays, answering contradictions and metaphysical questions
+├── contact.html      Contact page (email only)
+├── style.css         All styling, colors, layout, animations
+├── script.js          Nav toggle, scroll animations, article accordion, copy button
+└── README.md          This file
+```
 
-- **Home** – an introduction to the site's purpose and a look at what it covers.
-- **About** – who Unified is, what kind of debates they engage in, and how they try to argue honestly.
-- **Articles** – full essays on both contradictions and metaphysical questions, including *The Problem of Evil*, *The Two Genealogies of Christ*, *Free Will and Divine Foreknowledge*, and *Essence and Energies*.
-- **Contact** – a direct email line for objections, questions, and corrections.
+## Editing content
 
-## Get in touch
+- **Text**: open any `.html` file in a text editor and edit directly. Each page repeats the same nav and footer markup at the top and bottom.
+- **Adding a new article**: in `articles.html`, copy one of the `<article class="essay glass reveal">` blocks, give it a new `id`, update the `data-category` to either `contradiction` or `metaphysics`, and fill in the title, excerpt, and body paragraphs.
+- **Colors and fonts**: all of the color values and font names live at the top of `style.css` under `:root`. Changing a value there updates it across every page.
+- **Email address**: the contact address appears in `contact.html`, in both the `mailto:` link and the copy button's `data-email` attribute.
 
-Disagreement is welcome. If you think an argument on the site fails, or you have a contradiction that hasn't been covered, reach out at **contactunified@proton.me**.
+## Hosting it online
+
+The site is fully static, so it works on any static host. A few common options:
+
+- **Netlify or Cloudflare Pages**: drag and drop the folder onto their dashboard.
+- **GitHub Pages**: push the folder to a repository and enable Pages in the repo settings.
+
+No configuration, build tools, or database are needed for any of these.

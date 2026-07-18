@@ -2,6 +2,21 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // dark mode toggle
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('lo_theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('lo_theme', 'dark');
+      }
+    });
+  }
+
   // announcement bar dismiss
   const bar = document.getElementById('announcementBar');
   const closeBtn = document.getElementById('announcementClose');
