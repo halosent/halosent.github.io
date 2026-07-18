@@ -481,34 +481,6 @@ section.section{ padding: 80px 0; }
   border-radius: 999px;
   margin-bottom: 14px;
 }
-.essay-meta-row{
-  display:flex;
-  align-items:center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.essay-meta-row .tag{ margin-bottom: 0; }
-.diff-tag{
-  display:inline-block;
-  font-family: var(--font-ui);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  background: rgba(75,67,58,0.08);
-  padding: 5px 12px;
-  border-radius: 999px;
-}
-.read-time{
-  display:inline-flex;
-  align-items:center;
-  gap: 5px;
-  font-family: var(--font-ui);
-  font-size: 0.8rem;
-  color: var(--ink-faint);
-}
-.read-time svg{ width:13px; height:13px; flex-shrink:0; }
 .article-card h3{
   font-family: var(--font-display);
   font-size: 1.32rem;
