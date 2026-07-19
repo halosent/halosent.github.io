@@ -758,6 +758,31 @@ footer .wrap{
 /* ============================================
    ARTICLES PAGE
    ============================================ */
+.search-row{
+  display:flex;
+  justify-content:center;
+  margin-bottom: 22px;
+}
+.search-box{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 18px;
+}
+.search-box svg{ width:17px; height:17px; color: var(--ink-faint); flex-shrink:0; }
+.search-box input{
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.search-box input::placeholder{ color: var(--ink-faint); }
+
 .filter-row{
   display:flex;
   justify-content:center;
@@ -840,6 +865,33 @@ footer .wrap{
   font-style: italic;
   color: var(--umber);
 }
+.essay-actions{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(169,129,47,0.16);
+}
+.essay-action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap: 7px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--white);
+  border: 1px solid var(--glass-border);
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .25s ease, border-color .25s ease, background .25s ease;
+}
+.essay-action-btn:hover{ color: var(--gold); border-color: var(--gold); }
+.essay-action-btn svg{ width:14px; height:14px; flex-shrink:0; }
 
 /* ============================================
    CONTACT PAGE

@@ -78,18 +78,100 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // article filter
+  // article filter + search combined
   const filterBtns = document.querySelectorAll('.filter-btn');
   const essayItems = document.querySelectorAll('.essay');
+  const searchInput = document.getElementById('articleSearch');
+  const noResults = document.getElementById('noResults');
+  let activeFilter = 'all';
+
+  function applyEssayFilters() {
+    const term = (searchInput ? searchInput.value : '').trim().toLowerCase();
+    let visibleCount = 0;
+    essayItems.forEach(item => {
+      const matchesCategory = activeFilter === 'all' || item.dataset.category === activeFilter;
+      const text = item.textContent.toLowerCase();
+      const matchesSearch = term === '' || text.includes(term);
+      const show = matchesCategory && matchesSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+    if (noResults) {
+      noResults.style.display = visibleCount === 0 ? '' : 'none';
+    }
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      essayItems.forEach(item => {
-        const show = filter === 'all' || item.dataset.category === filter;
-        item.style.display = show ? '' : 'none';
+      activeFilter = btn.dataset.filter;
+      applyEssayFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyEssayFilters);
+  }
+
+  // essay actions: copy link, share to X, download
+  const clockIconUnused = null;
+  essayItems.forEach(essay => {
+    const bodyInner = essay.querySelector('.essay-body-inner');
+    const h3 = essay.querySelector('h3');
+    if (!bodyInner || !h3) return;
+    const id = essay.id;
+    const title = h3.textContent;
+    const url = window.location.origin + window.location.pathname + '#' + id;
+    const shareText = encodeURIComponent(title + ' — Live Orthodox');
+    const shareUrl = encodeURIComponent(url);
+
+    const actions = document.createElement('div');
+    actions.className = 'essay-actions';
+    actions.innerHTML =
+      '<button class="essay-action-btn" data-role="copy" data-url="' + url + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007.07 0l2-2a5 5 0 00-7.07-7.07l-1 1"/><path d="M14 11a5 5 0 00-7.07 0l-2 2a5 5 0 007.07 7.07l1-1"/></svg>' +
+        '<span class="action-label">Copy link</span>' +
+      '</button>' +
+      '<a class="essay-action-btn" href="https://twitter.com/intent/tweet?url=' + shareUrl + '&text=' + shareText + '" target="_blank" rel="noopener">' +
+        '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22H16.9l-5-6.5-5.7 6.5H2l8.1-9.3L1 2h6.6l4.5 6 6.8-6zM17.7 20h1.7L7.4 3.9H5.6L17.7 20z"/></svg>' +
+        '<span class="action-label">Share</span>' +
+      '</a>' +
+      '<button class="essay-action-btn" data-role="download" data-id="' + id + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>' +
+        '<span class="action-label">Download</span>' +
+      '</button>';
+    bodyInner.appendChild(actions);
+  });
+
+  document.querySelectorAll('.essay-action-btn[data-role="copy"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.url).then(() => {
+        const label = btn.querySelector('.action-label');
+        const original = label.textContent;
+        label.textContent = 'Copied';
+        setTimeout(() => { label.textContent = original; }, 1800);
       });
+    });
+  });
+
+  document.querySelectorAll('.essay-action-btn[data-role="download"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const essay = document.getElementById(btn.dataset.id);
+      if (!essay) return;
+      const title = essay.querySelector('h3').textContent;
+      const paras = Array.from(essay.querySelectorAll('.essay-body-inner p'))
+        .map(p => p.textContent.trim())
+        .join('\n\n');
+      const text = title + '\n\nLive Orthodox — liveorthodox.com\n\n' + paras;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = btn.dataset.id + '.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
     });
   });
 
