@@ -669,6 +669,108 @@ footer .wrap{
 }
 
 /* ============================================
+   VERSES PAGE
+   ============================================ */
+.verse-lookup{
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 36px;
+}
+.verse-form{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.verse-form input{
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  outline: none;
+}
+.verse-form input::placeholder{ color: var(--ink-faint); }
+.verse-form .btn{ flex-shrink: 0; }
+
+.verse-examples{
+  display:flex;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+.verse-chip{
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: var(--gold-pale);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+.verse-chip:hover{ background: var(--gold); color: #fffdf8; }
+
+.verse-result{ margin-top: 28px; }
+.verse-result:empty{ margin-top: 0; }
+.verse-card{
+  padding: 26px 28px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--glass-border);
+}
+.verse-card .verse-ref{
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.verse-card .verse-text{
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.verse-card .verse-translation{
+  margin-top: 14px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+.verse-error{
+  padding: 20px 24px;
+  border-radius: 14px;
+  background: rgba(169,129,47,0.08);
+  border: 1px solid var(--glass-border);
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+.verse-loading{
+  color: var(--ink-faint);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+.verse-note{
+  text-align:center;
+  max-width: 520px;
+  margin: 22px auto 0;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+/* ============================================
    ABOUT PAGE
    ============================================ */
 .about-layout{

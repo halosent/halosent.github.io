@@ -188,4 +188,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // verse lookup
+  const verseForm = document.getElementById('verseForm');
+  const verseInput = document.getElementById('verseInput');
+  const verseResult = document.getElementById('verseResult');
+
+  async function lookupVerse(ref) {
+    if (!ref || !ref.trim()) return;
+    verseResult.innerHTML = '<p class="verse-loading">Looking that up...</p>';
+    try {
+      const res = await fetch('https://bible-api.com/' + encodeURIComponent(ref.trim()));
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      if (!data || !data.text) throw new Error('not found');
+      const text = data.text.trim().replace(/\n+/g, ' ');
+      verseResult.innerHTML =
+        '<div class="verse-card">' +
+          '<div class="verse-ref">' + data.reference + '</div>' +
+          '<div class="verse-text">' + text + '</div>' +
+          '<div class="verse-translation">' + (data.translation_name || 'World English Bible') + '</div>' +
+        '</div>';
+    } catch (err) {
+      verseResult.innerHTML = '<div class="verse-error">Couldn\'t find that reference. Try a format like "John 3:16" or "Romans 8:28-30".</div>';
+    }
+  }
+
+  if (verseForm) {
+    verseForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      lookupVerse(verseInput.value);
+    });
+    document.querySelectorAll('.verse-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        verseInput.value = chip.dataset.ref;
+        lookupVerse(chip.dataset.ref);
+      });
+    });
+  }
+
 });
