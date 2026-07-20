@@ -792,10 +792,8 @@ footer .wrap{
    ABOUT PAGE
    ============================================ */
 .about-layout{
-  display:grid;
-  grid-template-columns: 320px 1fr;
-  gap: 48px;
-  align-items:start;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .about-portrait{
   padding: 40px 30px;
