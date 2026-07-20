@@ -214,6 +214,24 @@ section{ position: relative; }
   margin-bottom: 10px;
 }
 .discord-cta p{ color: var(--ink-soft); max-width: 52ch; margin: 0 auto 24px; }
+.social-row{
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.social-icon{
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--glass-border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--ink-soft);
+  transition: color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.social-icon:hover{ color: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
 
 /* ---------- nav ---------- */
 .site-nav{
@@ -856,6 +874,58 @@ footer .wrap{
   color: var(--gold);
   font-size: 0.8rem;
 }
+
+/* ============================================
+   FAQ PAGE
+   ============================================ */
+.faq-list{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.faq-item{ overflow:hidden; }
+.faq-question{
+  padding: 24px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 20px;
+  cursor:pointer;
+  user-select:none;
+}
+.faq-question h3{
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.faq-toggle{
+  flex-shrink:0;
+  width: 38px; height:38px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+  transition: transform .35s ease, background .3s ease;
+}
+.faq-toggle svg{ width:15px; height:15px; color: var(--gold); transition: transform .35s ease, color .3s ease; }
+.faq-item.open .faq-toggle{ background: var(--gold); }
+.faq-item.open .faq-toggle svg{ color:#fffdf8; transform: rotate(180deg); }
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition: max-height .5s ease;
+}
+.faq-answer-inner{
+  padding: 0 30px 26px;
+  border-top: 1px solid rgba(169,129,47,0.16);
+  margin: 0 30px;
+  padding-top: 18px;
+}
+.faq-answer-inner p{ color: var(--ink-soft); font-size: 0.98rem; }
 
 /* ============================================
    ARTICLES PAGE
