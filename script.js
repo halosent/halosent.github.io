@@ -97,18 +97,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // article filter + search combined
+  // article filter + search combined (declared early so bookmark logic below can use essayItems)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const essayItems = document.querySelectorAll('.essay');
   const searchInput = document.getElementById('articleSearch');
   const noResults = document.getElementById('noResults');
   let activeFilter = 'all';
 
+  // bookmarks: inject star button next to each essay's toggle, wrap both
+  const BOOKMARK_KEY = 'lo_bookmarks';
+  function getBookmarks() {
+    try {
+      return new Set(JSON.parse(localStorage.getItem(BOOKMARK_KEY) || '[]'));
+    } catch (e) {
+      return new Set();
+    }
+  }
+  function saveBookmarks(set) {
+    localStorage.setItem(BOOKMARK_KEY, JSON.stringify(Array.from(set)));
+  }
+  let bookmarks = getBookmarks();
+
+  essayItems.forEach(essay => {
+    const head = essay.querySelector('.essay-head');
+    const toggle = essay.querySelector('.essay-toggle');
+    if (!head || !toggle) return;
+    const id = essay.id;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'essay-head-actions';
+
+    const star = document.createElement('button');
+    star.className = 'essay-bookmark';
+    star.setAttribute('aria-label', 'Save for later');
+    star.dataset.id = id;
+    star.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12a1 1 0 011 1v17l-7-4-7 4V4a1 1 0 011-1z"/></svg>';
+    if (bookmarks.has(id)) star.classList.add('saved');
+
+    head.insertBefore(wrap, toggle);
+    wrap.appendChild(star);
+    wrap.appendChild(toggle);
+
+    star.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (bookmarks.has(id)) {
+        bookmarks.delete(id);
+        star.classList.remove('saved');
+      } else {
+        bookmarks.add(id);
+        star.classList.add('saved');
+      }
+      saveBookmarks(bookmarks);
+      if (activeFilter === 'bookmarked') applyEssayFilters();
+    });
+  });
+
   function applyEssayFilters() {
     const term = (searchInput ? searchInput.value : '').trim().toLowerCase();
     let visibleCount = 0;
     essayItems.forEach(item => {
-      const matchesCategory = activeFilter === 'all' || item.dataset.category === activeFilter;
+      let matchesCategory;
+      if (activeFilter === 'all') {
+        matchesCategory = true;
+      } else if (activeFilter === 'bookmarked') {
+        matchesCategory = bookmarks.has(item.id);
+      } else {
+        matchesCategory = item.dataset.category === activeFilter;
+      }
       const text = item.textContent.toLowerCase();
       const matchesSearch = term === '' || text.includes(term);
       const show = matchesCategory && matchesSearch;
@@ -116,6 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (show) visibleCount++;
     });
     if (noResults) {
+      if (activeFilter === 'bookmarked' && visibleCount === 0 && term === '') {
+        noResults.textContent = "You haven't saved any articles yet. Tap the star on an essay to save it here.";
+      } else {
+        noResults.textContent = 'No articles match your search.';
+      }
       noResults.style.display = visibleCount === 0 ? '' : 'none';
     }
   }

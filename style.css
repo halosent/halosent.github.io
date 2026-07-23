@@ -998,6 +998,12 @@ footer .wrap{
   cursor:pointer;
   user-select:none;
 }
+.essay-head-actions{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-shrink: 0;
+}
 .essay-head-text h3{
   font-family: var(--font-display);
   font-size: 1.35rem;
@@ -1014,6 +1020,20 @@ footer .wrap{
   display:flex; align-items:center; justify-content:center;
   transition: transform .35s ease, background .3s ease;
 }
+.essay-bookmark{
+  flex-shrink:0;
+  width: 42px; height:42px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+  cursor: pointer;
+  transition: background .25s ease, border-color .25s ease;
+}
+.essay-bookmark svg{ width:17px; height:17px; color: var(--ink-faint); transition: color .25s ease; }
+.essay-bookmark:hover svg{ color: var(--gold); }
+.essay-bookmark.saved{ background: var(--gold-pale); border-color: var(--gold); }
+.essay-bookmark.saved svg{ color: var(--gold); fill: var(--gold); }
 .essay-toggle svg{ width:16px; height:16px; color: var(--gold); transition: transform .35s ease; }
 .essay.open .essay-toggle{ background: var(--gold); }
 .essay.open .essay-toggle svg{ color:#fffdf8; transform: rotate(180deg); }
