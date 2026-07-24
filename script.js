@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (noResults) {
       if (activeFilter === 'bookmarked' && visibleCount === 0 && term === '') {
-        noResults.textContent = "You haven't saved any articles yet. Tap the star on an essay to save it here.";
+        noResults.textContent = "You haven't saved any articles yet. Tap the bookmark icon on an essay to save it here.";
       } else {
         noResults.textContent = 'No articles match your search.';
       }
