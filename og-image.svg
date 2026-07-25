@@ -26,7 +26,7 @@
     <line x1="230" y1="230" x2="230" y2="400" stroke-width="10"/>
     <line x1="180" y1="267" x2="280" y2="267" stroke-width="10"/>
     <line x1="157" y1="315" x2="303" y2="315" stroke-width="10"/>
-    <line x1="192" y1="378" x2="270" y2="362" stroke-width="10"/>
+    <line x1="192" y1="362" x2="270" y2="378" stroke-width="10"/>
   </g>
   <circle cx="230" cy="230" r="4.5" fill="#a9812f"/>
   <circle cx="230" cy="400" r="4.5" fill="#a9812f"/>
