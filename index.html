@@ -45,6 +45,21 @@
 </head>
 <body>
 
+<div class="page-loader" id="pageLoader">
+  <div class="loader-rings">
+    <div class="loader-ring ring-outer"></div>
+    <div class="loader-ring ring-inner"></div>
+    <div class="loader-cross">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="7" y1="7" x2="17" y2="7"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <line x1="8.5" y1="16.5" x2="15.5" y2="19"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
 <div class="bg-field"></div>
 <div class="orb orb-a"></div>
 <div class="orb orb-b"></div>
@@ -100,7 +115,17 @@
       <p style="margin-top:18px;"><a href="start-here.html" style="color:var(--ink-faint); font-family:var(--font-ui); font-size:0.86rem; text-decoration:underline;">New here? Start with a short guide →</a></p>
     </div>
     <div class="emblem-stage">
-      <div class="emblem-ring ring-1"></div>
+      <div class="embers">
+        <div class="ember" style="left:15%; animation-duration:6s; animation-delay:0s; --drift:14px;"></div>
+        <div class="ember" style="left:35%; animation-duration:7.5s; animation-delay:1.2s; --drift:-18px;"></div>
+        <div class="ember" style="left:55%; animation-duration:5.5s; animation-delay:2.4s; --drift:10px;"></div>
+        <div class="ember" style="left:70%; animation-duration:8s; animation-delay:0.6s; --drift:-12px;"></div>
+        <div class="ember" style="left:85%; animation-duration:6.8s; animation-delay:3s; --drift:16px;"></div>
+        <div class="ember" style="left:25%; animation-duration:7s; animation-delay:4.2s; --drift:-8px;"></div>
+      </div>
+      <div class="emblem-ring ring-1">
+        <div class="shimmer-sweep"></div>
+      </div>
       <div class="emblem-ring ring-2"></div>
       <div class="emblem-glass glass">
         <svg viewBox="0 0 24 24" fill="none" stroke="#a9812f" stroke-width="1.1">
@@ -199,6 +224,7 @@
       <li><a href="start-here.html">Start Here</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="church-fathers.html">Church Fathers</a></li>
+      <li><a href="library.html">Library</a></li>
       <li><a href="verses.html">Verses</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>

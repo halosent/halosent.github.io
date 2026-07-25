@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('lo_theme');
+    if(t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.documentElement.setAttribute('data-theme','dark');
+    }
+  }catch(e){}
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HMW3JQ6F1T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HMW3JQ6F1T');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Library | Live Orthodox</title>
+<meta name="description" content="A timeline of the Church, primary documents, scholars and philosophers, Orthodoxy's history with slavery, and the classical arguments for theism.">
+
+<link rel="canonical" href="https://liveorthodox.com/library.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Live Orthodox">
+<meta property="og:title" content="The Library | Live Orthodox">
+<meta property="og:description" content="A timeline of the Church, primary documents, scholars and philosophers, Orthodoxy's history with slavery, and the classical arguments for theism.">
+<meta property="og:url" content="https://liveorthodox.com/library.html">
+<meta property="og:image" content="https://liveorthodox.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Library | Live Orthodox">
+<meta name="twitter:description" content="A timeline of the Church, primary documents, scholars and philosophers, Orthodoxy's history with slavery, and the classical arguments for theism.">
+<meta name="twitter:image" content="https://liveorthodox.com/og-image.png">
+<link rel="alternate" type="application/rss+xml" title="Live Orthodox" href="/rss.xml">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-loader" id="pageLoader">
+  <div class="loader-rings">
+    <div class="loader-ring ring-outer"></div>
+    <div class="loader-ring ring-inner"></div>
+    <div class="loader-cross">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="7" y1="7" x2="17" y2="7"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <line x1="8.5" y1="16.5" x2="15.5" y2="19"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="bg-field"></div>
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+<div class="orb orb-c"></div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <line x1="12" y1="2" x2="12" y2="22"/>
+        <line x1="7" y1="7" x2="17" y2="7"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <line x1="8.5" y1="16.5" x2="15.5" y2="19"/>
+      </svg>
+      <span class="brand-text">Live <span class="thin">Orthodox</span></span>
+    </a>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.5A8.5 8.5 0 019.5 3.5a8.5 8.5 0 1011 11z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="verses.html">Verses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <h1>The Library</h1>
+    <p>A working archive. The Church's timeline, its founding documents, the people who shaped its thought, and a few of the hardest chapters in its history.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="lib-layout">
+
+      <aside class="lib-sidebar reveal">
+        <nav class="lib-toc" id="libToc">
+          <a href="#timeline" class="lib-toc-link">Timeline</a>
+          <a href="#documents" class="lib-toc-link">Primary Documents</a>
+          <a href="#scholars" class="lib-toc-link">Scholars &amp; Theologians</a>
+          <a href="#philosophers" class="lib-toc-link">Philosophers</a>
+          <a href="#slavery" class="lib-toc-link">Orthodoxy and Slavery</a>
+          <a href="#theism" class="lib-toc-link">Arguments for Classical Theism</a>
+        </nav>
+      </aside>
+
+      <div class="lib-content">
+
+        <!-- TIMELINE -->
+        <section class="lib-section" id="timeline">
+          <div class="lib-section-head reveal">
+            <h2>A Timeline of the Church</h2>
+            <p>From Pentecost to the spread of Orthodoxy into North America. What came first, and what followed from it.</p>
+          </div>
+          <div class="lib-zigzag reveal">
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">c. 33 AD</div>
+              <div class="lib-zigzag-text"><strong>Pentecost.</strong> The Church begins in Jerusalem, fifty days after the Resurrection.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">c. 50 AD</div>
+              <div class="lib-zigzag-text"><strong>Council of Jerusalem.</strong> The first council. Settles whether Gentile converts must follow Mosaic law.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">313 AD</div>
+              <div class="lib-zigzag-text"><strong>Edict of Milan.</strong> Emperor Constantine legalizes Christianity across the Roman Empire.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">325 AD</div>
+              <div class="lib-zigzag-text"><strong>First Council of Nicaea.</strong> Condemns Arianism. Produces the first draft of the Creed.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">381 AD</div>
+              <div class="lib-zigzag-text"><strong>First Council of Constantinople.</strong> Completes the Nicene Creed. Affirms the divinity of the Holy Spirit.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">451 AD</div>
+              <div class="lib-zigzag-text"><strong>Council of Chalcedon.</strong> Defines Christ's two natures. The Oriental Orthodox churches reject the formula, a division that still stands.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">787 AD</div>
+              <div class="lib-zigzag-text"><strong>Second Council of Nicaea.</strong> Restores the veneration of icons after the Iconoclast controversy.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">988 AD</div>
+              <div class="lib-zigzag-text"><strong>Baptism of Kievan Rus'.</strong> Prince Vladimir adopts Orthodoxy, bringing the Eastern Slavic world into the faith.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">1054 AD</div>
+              <div class="lib-zigzag-text"><strong>The Great Schism.</strong> East and West formally divide, over the Filioque, papal authority, and other disputes.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">1453 AD</div>
+              <div class="lib-zigzag-text"><strong>Fall of Constantinople.</strong> The Byzantine Empire ends. Orthodox Christianity's political situation is reshaped for centuries.</div>
+            </div>
+            <div class="lib-zigzag-item glass">
+              <div class="lib-zigzag-dot"></div>
+              <div class="lib-zigzag-year">1794 AD</div>
+              <div class="lib-zigzag-text"><strong>Mission to Alaska.</strong> Russian Orthodox missionaries arrive, beginning Orthodoxy's spread into North America.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DOCUMENTS -->
+        <section class="lib-section" id="documents">
+          <div class="lib-section-head reveal">
+            <h2>Primary Documents</h2>
+            <p>Texts that shaped doctrine, worship, and law, from the first century to the nineteenth.</p>
+          </div>
+          <div class="lib-doc-grid">
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h9l4 4v12H6z"/><path d="M15 4v4h4"/><line x1="9" y1="12" x2="16" y2="12"/><line x1="9" y1="16" x2="16" y2="16"/></svg></div>
+              <span class="lib-doc-date">c. 100 AD</span>
+              <h3>The Didache</h3>
+              <p>The earliest surviving Christian manual, covering ethics, baptism, fasting, and the Eucharist. Written before much of the New Testament reached its final form.</p>
+            </div>
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+              <span class="lib-doc-date">325 / 381 AD</span>
+              <h3>The Nicene Creed</h3>
+              <p>The foundational statement of Trinitarian faith, produced by the first two Ecumenical Councils. Still recited in the Divine Liturgy today.</p>
+            </div>
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h9l4 4v12H6z"/><path d="M15 4v4h4"/><line x1="9" y1="12" x2="16" y2="12"/><line x1="9" y1="16" x2="16" y2="16"/></svg></div>
+              <span class="lib-doc-date">c. 375&ndash;380 AD</span>
+              <h3>The Apostolic Constitutions</h3>
+              <p>A large compilation of early Church order, liturgy, and discipline. Presented under the name of the Apostles, though compiled centuries after them.</p>
+            </div>
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+              <span class="lib-doc-date">529&ndash;534 AD</span>
+              <h3>Corpus Juris Civilis</h3>
+              <p>Emperor Justinian's great Byzantine legal code. Shaped civil and canon law across the Christian East for centuries, including its provisions on slavery and manumission.</p>
+            </div>
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h9l4 4v12H6z"/><path d="M15 4v4h4"/><line x1="9" y1="12" x2="16" y2="12"/><line x1="9" y1="16" x2="16" y2="16"/></svg></div>
+              <span class="lib-doc-date">Compiled 1782</span>
+              <h3>The Philokalia</h3>
+              <p>An anthology of Orthodox spiritual and ascetic writing spanning the 4th to 15th centuries, gathered by St. Nikodemos of the Holy Mountain and St. Makarios of Corinth.</p>
+            </div>
+
+            <div class="lib-doc-card glass reveal">
+              <div class="lib-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+              <span class="lib-doc-date">1800 AD</span>
+              <h3>The Rudder (Pedalion)</h3>
+              <p>The standard Greek Orthodox compilation of canon law, gathering the canons of the Ecumenical Councils and the Fathers into one authoritative reference.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SCHOLARS -->
+        <section class="lib-section" id="scholars">
+          <div class="lib-section-head reveal">
+            <h2>Scholars &amp; Theologians</h2>
+            <p>Not the ancient Fathers, the more recent voices who shaped how Orthodoxy explains itself to the modern world.</p>
+          </div>
+          <div class="lib-people-grid">
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">GF</div>
+              <h3>Fr. Georges Florovsky</h3>
+              <div class="lib-person-dates">1893 &ndash; 1979</div>
+              <p>Historian of doctrine. Coined "neopatristic synthesis," urging a return to the Fathers over Western scholastic categories.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">VL</div>
+              <h3>Vladimir Lossky</h3>
+              <div class="lib-person-dates">1903 &ndash; 1958</div>
+              <p>Lay theologian. His <em>Mystical Theology of the Eastern Church</em> shaped how apophatic theology is explained to modern readers.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">AS</div>
+              <h3>Fr. Alexander Schmemann</h3>
+              <div class="lib-person-dates">1921 &ndash; 1983</div>
+              <p>Liturgical theologian, Dean of St. Vladimir's Seminary. Best known for <em>For the Life of the World</em>.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">JZ</div>
+              <h3>Met. John Zizioulas</h3>
+              <div class="lib-person-dates">1931 &ndash; 2023</div>
+              <p>Theologian of personhood and communion. Author of <em>Being as Communion</em>.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">JM</div>
+              <h3>Fr. John Meyendorff</h3>
+              <div class="lib-person-dates">1926 &ndash; 1992</div>
+              <p>Historian specializing in Byzantine theology, particularly the thought of St. Gregory Palamas.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">KW</div>
+              <h3>Met. Kallistos Ware</h3>
+              <div class="lib-person-dates">1934 &ndash; 2022</div>
+              <p>Convert-scholar. Author of <em>The Orthodox Church</em>, one of the most widely read introductions to Orthodoxy in English.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PHILOSOPHERS -->
+        <section class="lib-section" id="philosophers">
+          <div class="lib-section-head reveal">
+            <h2>Philosophers</h2>
+            <p>Some famous, some far less so. Christian thinkers who engaged philosophy directly, not only theology.</p>
+          </div>
+          <div class="lib-people-grid">
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">JM</div>
+              <h3>St. Justin Martyr</h3>
+              <div class="lib-person-dates">c. 100 &ndash; 165</div>
+              <p>Early apologist. Framed Christianity as the true philosophy, fulfilling the partial truths glimpsed by Greek thought.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">B</div>
+              <h3>Boethius</h3>
+              <div class="lib-person-dates">c. 480 &ndash; 524</div>
+              <p>Roman statesman. Wrote <em>The Consolation of Philosophy</em> awaiting execution, carrying classical philosophy into the medieval Christian world.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">JD</div>
+              <h3>St. John of Damascus</h3>
+              <div class="lib-person-dates">c. 675 &ndash; 749</div>
+              <p>The last major Greek Father. Wrote the <em>Fount of Knowledge</em> and defended icons during Iconoclasm.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">MP</div>
+              <h3>Michael Psellos</h3>
+              <div class="lib-person-dates">1017 &ndash; 1078</div>
+              <p>Byzantine polymath, far less known today. Revived the study of Plato in Constantinople and advised emperors.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">P</div>
+              <h3>St. Photios I</h3>
+              <div class="lib-person-dates">c. 810 &ndash; 893</div>
+              <p>Patriarch and scholar. His writing against the Filioque remains a foundational text in that dispute.</p>
+            </div>
+
+            <div class="lib-person-card glass reveal">
+              <div class="lib-person-frame">GP</div>
+              <h3>Gemistus Pletho</h3>
+              <div class="lib-person-dates">c. 1355 &ndash; 1452</div>
+              <p>Late Byzantine Neoplatonist, obscure to most readers today. His lectures in Florence helped spark Renaissance interest in Plato.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SLAVERY -->
+        <section class="lib-section" id="slavery">
+          <div class="lib-section-head reveal">
+            <h2>Orthodoxy and Slavery</h2>
+            <p>A difficult chapter, presented as history rather than argument. The record is mixed, and it is worth knowing honestly.</p>
+          </div>
+          <div class="lib-archive glass reveal">
+
+            <h4>Byzantine Law and the Church</h4>
+            <p>Justinian's legal code regulated slavery rather than abolishing it, but built in specific paths to freedom. Manumission performed inside a church carried full legal force, and clergy could act as witnesses to it. Church buildings also functioned as places of sanctuary where an enslaved person could seek refuge.</p>
+
+            <h4>An Early Voice Against the Institution Itself</h4>
+            <p>St. Gregory of Nyssa, in his <em>Homilies on Ecclesiastes</em> in the 4th century, delivered one of the earliest outright condemnations of slavery as an institution, arguing that no price can be placed on a being made in the image of God. His position was exceptional for its time. It did not become official Church policy for many centuries afterward.</p>
+
+            <h4>Serfdom in Russia</h4>
+            <p>Slavery in the strict sense declined across the Byzantine world over the medieval period, but serfdom, a related system binding peasants to land, became deeply entrenched in Russia. The Russian Orthodox Church largely operated within that system rather than opposing it directly. Serfdom was formally abolished by Tsar Alexander II in 1861, a reform partly influenced by Christian moral argument circulating at the time.</p>
+
+            <h4>Ottoman Rule and the Devshirme</h4>
+            <p>Under Ottoman rule, Orthodox Christian communities in the Balkans and Anatolia were subject to the devshirme, a periodic levy of Christian boys conscripted into Ottoman military and administrative service, frequently converted to Islam in the process. A distinct experience from chattel slavery, but a major and painful part of Orthodox history between the 14th and 17th centuries.</p>
+
+          </div>
+        </section>
+
+        <!-- CLASSICAL THEISM -->
+        <section class="lib-section" id="theism">
+          <div class="lib-section-head reveal">
+            <h2>Arguments for Classical Theism</h2>
+            <p>Quick reference. A few link to full essays already on this site, the rest are summarized here.</p>
+          </div>
+          <div class="lib-theism-grid">
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">Leibniz, Aquinas</span>
+              <h3>The Cosmological Argument</h3>
+              <p>Everything contingent needs an explanation outside itself. That chain cannot regress forever without landing on something that exists necessarily.</p>
+              <a href="articles.html#contingency-argument">Read the full essay</a>
+            </div>
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">Anselm, Plantinga</span>
+              <h3>The Ontological Argument</h3>
+              <p>An argument from pure logic. If a maximally great being's existence is even possible, its own definition requires that it actually exists.</p>
+            </div>
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">Paley, fine-tuning</span>
+              <h3>The Teleological Argument</h3>
+              <p>The universe's order, and the narrow physical constants that allow life at all, are better explained by a designing intelligence than by chance alone.</p>
+            </div>
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">Kant, C.S. Lewis</span>
+              <h3>The Moral Argument</h3>
+              <p>Objective moral values need a standard beyond human opinion. Humans disagree too much to be that standard themselves.</p>
+              <a href="articles.html#morality-without-god">Read the full essay</a>
+            </div>
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">William Alston</span>
+              <h3>Argument from Religious Experience</h3>
+              <p>Direct experience of the divine is reported across cultures and centuries, with enough consistency to count as real evidence, not just noise.</p>
+            </div>
+
+            <div class="lib-theism-card glass reveal">
+              <span class="lib-theism-tag">Aquinas' First Way</span>
+              <h3>The Argument from Motion</h3>
+              <p>Everything in motion or change is being changed by something else. That series cannot regress forever, and needs an unmoved first cause.</p>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Live Orthodox</div>
+      <div class="footer-note">Maintained by Unified · Eastern Orthodox Christian</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="church-fathers.html">Church Fathers</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="verses.html">Verses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
