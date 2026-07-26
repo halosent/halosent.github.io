@@ -225,30 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareText = encodeURIComponent(title + ' — Live Orthodox');
     const shareUrl = encodeURIComponent(url);
 
-    // related articles: prefer same category, fill remaining slots from elsewhere
-    const category = essay.dataset.category;
-    const others = Array.from(essayItems).filter(e => e !== essay);
-    const sameCategory = others.filter(e => e.dataset.category === category);
-    let related = sameCategory.slice(0, 3);
-    if (related.length < 3) {
-      const rest = others.filter(e => !related.includes(e));
-      related = related.concat(rest.slice(0, 3 - related.length));
-    }
-    if (related.length) {
-      const relatedBlock = document.createElement('div');
-      relatedBlock.className = 'related-articles';
-      const linkArrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-      relatedBlock.innerHTML =
-        '<h4>Related Articles</h4>' +
-        '<div class="related-links">' +
-        related.map(e => {
-          const rTitle = e.querySelector('h3') ? e.querySelector('h3').textContent : '';
-          return '<a class="related-link" href="#' + e.id + '">' + linkArrow + rTitle + '</a>';
-        }).join('') +
-        '</div>';
-      bodyInner.appendChild(relatedBlock);
-    }
-
     const actions = document.createElement('div');
     actions.className = 'essay-actions';
     actions.innerHTML =
@@ -266,39 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
       '</button>';
     bodyInner.appendChild(actions);
   });
-
-  // clicking a related-article link should open that essay's accordion, not just scroll to it
-  document.querySelectorAll('.related-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if (!target) return;
-      e.preventDefault();
-      essays.forEach(other => {
-        other.classList.remove('open');
-        const b = other.querySelector('.essay-body');
-        if (b) b.style.maxHeight = null;
-      });
-      target.classList.add('open');
-      const body = target.querySelector('.essay-body');
-      if (body) body.style.maxHeight = body.scrollHeight + 40 + 'px';
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', '#' + targetId);
-    });
-  });
-
-  // open the matching essay automatically if the page loads with a hash in the URL
-  if (window.location.hash) {
-    const target = document.getElementById(window.location.hash.slice(1));
-    if (target && target.classList.contains('essay')) {
-      target.classList.add('open');
-      const body = target.querySelector('.essay-body');
-      if (body) {
-        body.style.maxHeight = body.scrollHeight + 40 + 'px';
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
-      }
-    }
-  }
 
   document.querySelectorAll('.essay-action-btn[data-role="copy"]').forEach(btn => {
     btn.addEventListener('click', () => {

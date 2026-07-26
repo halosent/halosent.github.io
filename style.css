@@ -1518,58 +1518,6 @@ footer .wrap{
 .essay-action-btn:hover{ color: var(--gold); border-color: var(--gold); }
 .essay-action-btn svg{ width:14px; height:14px; flex-shrink:0; }
 
-.essay.featured{
-  border: 1px solid var(--gold);
-  box-shadow: 0 8px 32px rgba(169,129,47,0.18), inset 0 1px 0 rgba(255,255,255,0.6);
-  position: relative;
-}
-.essay-featured-badge{
-  position:absolute;
-  top: -12px;
-  left: 28px;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  color: #fffdf8;
-  font-family: var(--font-ui);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(169,129,47,0.35);
-}
-
-.related-articles{
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(169,129,47,0.16);
-}
-.related-articles h4{
-  font-family: var(--font-ui);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.related-links{
-  display:flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.related-link{
-  display:flex;
-  align-items:center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--ink);
-  text-decoration:none;
-  padding: 4px 0;
-  transition: color .2s ease;
-}
-.related-link:hover{ color: var(--gold); }
-.related-link svg{ width:13px; height:13px; flex-shrink:0; color: var(--gold); }
-
 /* ============================================
    CONTACT PAGE
    ============================================ */
