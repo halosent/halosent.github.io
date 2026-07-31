@@ -1223,6 +1223,25 @@ footer .wrap{
 .lib-archive{
   padding: 36px 40px;
 }
+
+/* ---------- glossary term cards ---------- */
+.glossary-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.glossary-term{ padding: 22px 26px; }
+.glossary-term h3{
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.glossary-term h3 em{ color: var(--gold); font-style: italic; font-weight: 400; }
+.glossary-term p{ color: var(--ink-soft); font-size: 0.92rem; }
+@media (max-width: 700px){
+  .glossary-grid{ grid-template-columns: 1fr; }
+}
 .lib-archive h4{
   font-family: var(--font-ui);
   font-size: 0.76rem;
@@ -1463,10 +1482,18 @@ footer .wrap{
 }
 .footer-col{ min-width: 0; }
 .footer-col-brand p{ color: var(--ink-soft); font-size: 0.9rem; margin: 10px 0 18px; max-width: 34ch; }
-.footer-socials{ display:flex; gap: 10px; }
-.footer-socials .social-icon{ width: 36px; height: 36px; }
-.footer-socials .social-icon svg{ transition: transform .3s ease; }
-.footer-socials .social-icon:hover svg{ transform: rotate(-8deg) scale(1.1); }
+.footer-socials{ display:flex; gap: 16px; flex-wrap: wrap; }
+.footer-social-text{
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.footer-social-text:hover{ color: var(--gold); border-color: var(--gold); }
 .footer-col h5{
   font-family: var(--font-ui);
   font-size: 0.76rem;
@@ -1535,6 +1562,10 @@ footer .wrap{
 @media (max-width: 560px){
   .icon-row-grid{ grid-template-columns: 1fr; }
   .footer-grid{ grid-template-columns: 1fr; }
+  .footer-col-brand{ text-align:center; }
+  .footer-col-brand .brand{ justify-content:center; }
+  .footer-col-brand p{ max-width: none; margin-left:auto; margin-right:auto; }
+  .footer-socials{ justify-content:center; }
 }
 
 /* ============================================
