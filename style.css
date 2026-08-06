@@ -1847,28 +1847,62 @@ footer .wrap{
 }
 
 .essay-list{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: start;
+  display:flex;
+  flex-direction:column;
+  counter-reset: essaynum;
 }
 .essay{
-  grid-column: span 1;
-  border-top-width: 3px;
-  border-top-style: solid;
-  border-top-color: var(--gold);
+  counter-increment: essaynum;
+  background: none !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--glass-border);
+  transition: background .3s ease, border-radius .3s ease, margin .3s ease;
 }
-.essay.open,
+.essay::before{ content: none !important; }
+.essay:hover{ background: var(--gold-pale) !important; }
+.essay[data-category="metaphysics"]{ border-left-color: var(--byz-blue); }
+.essay[data-category="evidence"]{ border-left-color: var(--byz-wine); }
+.essay[data-category="contradiction"]{ border-left-color: var(--gold); }
+.essay[data-category="orthodoxy-101"]{ border-left-color: var(--umber); }
+.essay.open{
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-left: 3px solid var(--gold) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 32px var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.6) !important;
+  margin: 10px 0;
+}
+.essay.open[data-category="metaphysics"]{ border-left-color: var(--byz-blue) !important; }
+.essay.open[data-category="evidence"]{ border-left-color: var(--byz-wine) !important; }
+.essay.open[data-category="orthodoxy-101"]{ border-left-color: var(--umber) !important; }
 .essay.featured{
-  grid-column: 1 / -1;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  border: 1px solid var(--gold) !important;
+  border-left: 3px solid var(--gold) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 32px rgba(169,129,47,0.18), inset 0 1px 0 rgba(255,255,255,0.6) !important;
+  margin-bottom: 8px;
 }
-.essay[data-category="metaphysics"]{ border-top-color: var(--byz-blue); }
-.essay[data-category="evidence"]{ border-top-color: var(--byz-wine); }
-.essay[data-category="contradiction"]{ border-top-color: var(--gold); }
-.essay[data-category="orthodoxy-101"]{ border-top-color: var(--umber); }
+.essay-head::before{
+  content: counter(essaynum, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.9rem;
+  color: var(--gold-pale);
+  margin-right: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.essay.featured .essay-head::before{ content: none; }
 @media (max-width: 760px){
-  .essay-list{ grid-template-columns: 1fr; }
-  .essay{ grid-column: 1 / -1; }
+  .essay-head::before{ display:none; }
 }
 .essay{
   overflow:hidden;
@@ -1877,12 +1911,13 @@ footer .wrap{
 .essay-head{
   padding: 28px 32px;
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:flex-start;
   gap: 24px;
   cursor:pointer;
   user-select:none;
 }
+.essay-head-text{ flex: 1; min-width: 0; }
 .essay-head-actions{
   display:flex;
   align-items:center;
