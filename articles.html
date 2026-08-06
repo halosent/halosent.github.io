@@ -126,29 +126,33 @@
 
 <section class="section" style="padding-top:0;">
   <div class="wrap">
+    <div class="lib-layout">
 
-    <div class="search-row reveal">
-      <div class="search-box glass">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" id="articleSearch" placeholder="Search articles...">
-      </div>
-    </div>
+      <aside class="lib-sidebar reveal">
+        <nav class="lib-toc" id="libToc">
+          <a href="#start-here-section" class="lib-toc-link">Start Here</a>
+          <a href="#orthodoxy-101" class="lib-toc-link">Orthodoxy 101</a>
+          <a href="#contradictions" class="lib-toc-link">Contradictions</a>
+          <a href="#metaphysics" class="lib-toc-link">Metaphysics</a>
+          <a href="#evidence" class="lib-toc-link">Evidence</a>
+        </nav>
+        <div class="search-box glass" style="margin-top:24px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="articleSearch" placeholder="Search articles...">
+        </div>
+      </aside>
 
-    <div class="filter-row reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="orthodoxy-101">Orthodoxy 101</button>
-      <button class="filter-btn" data-filter="contradiction">Contradictions</button>
-      <button class="filter-btn" data-filter="metaphysics">Metaphysics</button>
-      <button class="filter-btn" data-filter="evidence">Evidence</button>
-      <button class="filter-btn" data-filter="bookmarked">Bookmarked</button>
-    </div>
+      <div class="lib-content">
 
-    <p id="noResults" style="display:none; text-align:center; color:var(--ink-faint); font-family:var(--font-ui); font-size:0.92rem; margin-bottom:20px;">No articles match your search.</p>
+        <p id="noResults" style="display:none; text-align:center; color:var(--ink-faint); font-family:var(--font-ui); font-size:0.92rem; margin-bottom:20px;">No articles match your search.</p>
 
-    <div class="essay-list">
-
-      <!-- Featured -->
-      <article class="essay glass reveal featured" id="start-here-orthodoxy" data-category="orthodoxy-101">
+        <section class="lib-section" id="start-here-section">
+          <div class="lib-section-head reveal">
+            <h2>Start Here</h2>
+            <p>New to the site. This is the one to read first.</p>
+          </div>
+          <div class="essay-list">
+<article class="essay glass reveal featured" id="start-here-orthodoxy" data-category="orthodoxy-101">
         <span class="essay-featured-badge">Start Here</span>
         <div class="essay-head">
           <div class="essay-head-text">
@@ -171,9 +175,355 @@
           </div>
         </div>
       </article>
+          </div>
+        </section>
 
-      <!-- 1 -->
-      <article class="essay glass reveal" id="problem-of-evil" data-category="metaphysics">
+        <section class="lib-section" id="orthodoxy-101">
+          <div class="lib-section-head reveal">
+            <h2>Orthodoxy 101</h2>
+            <p>Beginner-friendly explainers for anyone new to the tradition.</p>
+          </div>
+          <div class="essay-list">
+<article class="essay glass reveal" id="what-is-the-trinity" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>What Is the Trinity?</h3>
+            <p>Not three gods. Not one person wearing three masks. The plain explanation, before getting into the objections.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>One God. Three persons. Father, Son, and Holy Spirit. Each fully God, not a third of God each. Not three separate gods working together, and not one person switching between three roles. That's the doctrine in a sentence. The rest is unpacking what that sentence actually means.</p>
+            <p>It doesn't come from a single proof-text. It comes from a pattern running through the whole New Testament. Jesus baptizes in the name of the Father, the Son, and the Holy Spirit, one name, three persons named inside it. The Spirit is called God. The Son is called God. The Father is called God. The Church didn't invent this pattern at Nicaea in 325, it inherited it, and Nicaea, then Constantinople in 381, gave it precise, defensible language.</p>
+            <p>That language matters. <em>Ousia</em> is the one shared divine essence. <em>Hypostasis</em> is each distinct person. The Cappadocian Fathers, Basil, Gregory Nazianzen, Gregory of Nyssa, worked out this vocabulary specifically so the Church could say "three" and "one" without contradicting itself.</p>
+            <p>If you're wondering whether this collapses into tritheism, the essay on this site titled "Is the Trinity Three Gods?" takes that objection on directly. This one is just the plain version, for anyone meeting the doctrine for the first time.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="early-church-belief" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>What Did the Early Church Believe?</h3>
+            <p>Before the creeds were written down formally, what were Christians actually doing and teaching. The earliest sources answer this directly.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>The earliest Christian writing outside the New Testament gives a fairly clear picture. The Didache, written around 100 AD, lays out baptism, fasting, and how the Eucharist should be conducted. It reads like an operating manual for a church that already knew exactly what it was doing.</p>
+            <p>St. Ignatius of Antioch, writing letters on his way to martyrdom just a few years later, treats the Eucharist as a real participation in Christ, not a symbolic reenactment, and treats the local bishop as the center of unity in each community. Neither of these ideas shows up as something new being introduced. They show up as something already assumed, already normal, worth restating only because false teaching was starting to challenge it.</p>
+            <p>The formal creeds came later, Nicaea in 325, Constantinople in 381, but they weren't inventing belief from scratch. They were putting precise, defensible language around what communities were already practicing and confessing. Continuity, not innovation, is the actual pattern in the earliest sources.</p>
+            <p>The <a href="library.html#documents">Library page</a> has more on the Didache and the other primary documents from this period, if you want to go straight to the sources.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="why-venerate-icons" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>Why Do Orthodox Christians Venerate Icons?</h3>
+            <p>It looks like worship of an image from the outside. The actual theology draws a much sharper line than it first appears.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Veneration and worship are not the same act, and Orthodox theology has always insisted on keeping them separate. Worship, <em>latria</em>, belongs to God alone. Veneration, <em>proskynesis</em>, is the honor given to an icon, which passes through the image to the person it depicts. Kissing an icon of a saint is closer to kissing a photograph of someone you love than it is to worshipping a painted board.</p>
+            <p>The theological case for icons at all rests on the Incarnation specifically. God became visible and material in Christ. Once that happened, depicting Christ, and the saints who reflect him, became theologically appropriate rather than a violation of the command against graven images. That command was given before God took on a visible human body. Everything changed once he did.</p>
+            <p>This wasn't settled without a fight. The Iconoclast controversy ran roughly from 726 to 843, with entire periods where icons were banned and destroyed by imperial order. St. John of Damascus wrote the defense that carried the argument, and the Second Council of Nicaea in 787 restored icon veneration as legitimate. The final resolution in 843 is still celebrated in Orthodox worship today as the Triumph of Orthodoxy.</p>
+            <p>St. John of Damascus has a fuller profile on the <a href="library.html#philosophers">Library page</a>, alongside the rest of that controversy's timeline.</p>
+          </div>
+        </div>
+      </article>
+      <article class="essay glass reveal" id="what-is-the-filioque" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>What Is the Filioque?</h3>
+            <p>Three added words split the Church for a thousand years. Here's what they say and why it mattered enough to matter.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>The original Nicene Creed, agreed on by the whole Church in 381, says the Holy Spirit proceeds from the Father. Just the Father. The Latin word <em>filioque</em> means "and the Son," and it's what the Western Church later added, so the line reads the Spirit proceeds from the Father and the Son.</p>
+            <p>Two separate problems sit underneath those three words. The first is process. An ecumenical creed belongs to the whole Church, and the West added this on its own, without the East agreeing or even being consulted. To the Orthodox, that's the real scandal, one part of the Church editing a shared text unilaterally.</p>
+            <p>The second is theological. Orthodox theology holds that the Father alone is the source of both the Son and the Spirit within the Trinity. Adding the Son as a second source for the Spirit's origin blurs a distinction that matters, making it sound like the Son shares a role that belongs to the Father specifically, which threatens how the three persons are properly distinguished from one another.</p>
+            <p>The Catholic side argues the Father and Son act as a single principle in bringing forth the Spirit, not two separate sources, and that this reflects something real about how the persons relate rather than an invention. Whichever side is right, the Filioque sits alongside papal authority as one of the concrete issues behind the Great Schism of 1054, which the Library page's timeline covers in full.</p>
+          </div>
+        </div>
+      </article>
+      <article class="essay glass reveal" id="what-is-original-sin" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>What Is Original Sin, and Does Orthodoxy Believe It?</h3>
+            <p>Not the way most people have heard it explained. The Orthodox version is meaningfully gentler than the Western one.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>In the West, especially after St. Augustine, original sin usually means every human inherits Adam's actual guilt. Born already condemned, before doing anything themselves. That's the version most people, Christian or not, have actually heard.</p>
+            <p>Orthodoxy uses a different term, ancestral sin, and teaches something meaningfully different. We inherit the consequence of Adam's fall, mortality, corruption, a will bent toward sin, but not the personal guilt for his specific act. You're not born guilty of what Adam did. You're born into the damaged condition his act introduced into human nature generally.</p>
+            <p>Part of the difference traces to a translation. Romans 5:12 in the original Greek doesn't clearly support inherited guilt the way Augustine's Latin text did. Eastern Fathers like St. John Chrysostom read the passage as describing inherited mortality and corruption, not inherited legal guilt standing against a newborn.</p>
+            <p>This isn't a minor footnote. It shapes how each tradition understands infant baptism, what salvation is actually rescuing a person from, and whether an unbaptized infant carries guilt requiring resolution. Orthodoxy's answer here is gentler than the popular Western picture, closer to inherited brokenness than inherited crime.</p>
+          </div>
+        </div>
+      </article>
+      <article class="essay glass reveal" id="is-baptism-necessary" data-category="orthodoxy-101">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Orthodoxy 101</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Beginner</span>
+            </div>
+            <h3>Is Baptism Necessary for Salvation?</h3>
+            <p>Neither "faith alone, baptism optional" nor "no baptism, no salvation, full stop." The real answer sits in the tension between the two.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Orthodox teaching holds baptism as the normal means Christ established for entering the Church and receiving grace. Not a magic formula, a real sacramental participation in Christ's death and resurrection, something that actually does something rather than merely symbolizing it.</p>
+            <p>But "necessary" needs real nuance here. Orthodoxy doesn't teach that an unbaptized infant, or a catechumen preparing for baptism who dies unexpectedly, is automatically condemned. God's mercy isn't limited to the exact sacraments he instituted, even while the Church doesn't presume to promise salvation entirely outside them either. Tradition has long spoken of a baptism of blood, martyrs killed for the faith before they could be formally baptized, as a real, if unusual, path.</p>
+            <p>Scripture itself supplies the clearest case. The thief crucified next to Jesus, never baptized, hears directly from Christ, today you will be with me in paradise. Orthodox tradition points to this specifically as evidence that God's mercy isn't mechanically bound to the sacraments in every single case.</p>
+            <p>So the honest answer holds two things at once without resolving them into a tidier formula. Baptism is the path Christ gave the Church, and it should be sought and valued as such. It is not a rigid gate that God himself cannot step around when he chooses to.</p>
+          </div>
+        </div>
+      </article>
+          </div>
+        </section>
+
+        <section class="lib-section" id="contradictions">
+          <div class="lib-section-head reveal">
+            <h2>Contradictions</h2>
+            <p>Common objections to Scripture, answered directly and in context.</p>
+          </div>
+          <div class="essay-list">
+<article class="essay glass reveal" id="creation-accounts" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>Two Creation Accounts: Genesis 1 and Genesis 2</h3>
+            <p>Skeptics point to two orders of creation in the opening chapters of Genesis as proof of an editorial mistake. The genres involved say otherwise.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Genesis 1 lays out six days, ending with man and woman created together. Genesis 2 slows down on day six specifically. Man formed first, then animals, then the woman. Read as two attempts at the same timeline, and it looks like a contradiction. Read as two different jobs, and the tension mostly disappears.</p>
+            <p>Genesis 1 is a structured overview. Built around a deliberate pattern of forming and filling, which ancient audiences would have recognized as literary structure, not a strict timeline. Genesis 2 narrows in on the garden specifically. It's interested in something different, how humanity relates to the earth, to each other, and to God. There's also a grammar point worth knowing. The Hebrew in 2:19, usually translated God <span class="verse">"formed"</span> the animals, can just as legitimately be read as a pluperfect, <span class="verse">"had formed."</span> Which removes the sequencing problem entirely.</p>
+            <p>This isn't a rescue invented after the fact. Ancient Near Eastern writing regularly paired a broad cosmic account with a closer, thematic retelling of the same events. Genesis 1 and 2 fit that pattern. Think of it less like two competing witness statements, and more like a wide shot followed by a close up.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="judas-death" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>1 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>Judas' Death: Hanged, or Fell Headlong</h3>
+            <p>Matthew says Judas hanged himself. Acts describes him falling and bursting open. Both can be true, and probably are.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Matthew says Judas hanged himself. Acts says he fell headlong, and his body burst open. Read as two full descriptions of the same moment, they don't match. Read as two partial glimpses of the same event, they line up. If grimly.</p>
+            <p>This isn't a new harmonization. People were proposing it long before modern skepticism came along. Judas hanged himself from a tree above the Field of Blood. At some point the rope or branch gave way, sending the body down onto rocky ground, where it split open. Matthew records how he died. Acts, written by Luke, records what was found afterward. Neither writer claims to be giving the whole picture. Which means neither excludes the other.</p>
+            <p>There's a detail people skip past. The Greek in Acts 1:18 doesn't strictly say Judas performed the fall himself. It can be read as "he came to his end there," which fits a body that was already dead by hanging before it came down. Two witnesses describing different stages of the same event is a far simpler explanation than a fabricated legend. Because simpler explanations tend to be the true ones.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="genealogies" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>The Two Genealogies of Christ</h3>
+            <p>Matthew and Luke trace different fathers back from Joseph. First century genealogical convention explains why.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Matthew traces Jesus back through Solomon. Luke traces him back through Nathan, a different son of David. The names in between don't match at all. Critics call it a fabrication and move on. The oldest Christian answer is simpler. The two writers were never trying to trace the same line.</p>
+            <p>Matthew is writing for a Jewish audience, building a legal case for kingship. So he follows the royal succession through Solomon, exactly the record a first century reader would expect for a throne claim. Luke is after something else, an actual line of physical descent. The early historian Africanus records a tradition, older than any modern critic, that Luke's genealogy runs through Mary. With Joseph listed under her line, because Jewish records were kept patrilineally.</p>
+            <p>You don't need to land on one exact mechanism to see the pattern was normal for the period. Jewish genealogies routinely served legal or thematic purposes rather than strict biology. Skipping names, or following adopted lines, when the point called for it. Two lists disagreeing on names is only a contradiction if both are claiming to do the same job. Neither Gospel says they are.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="three-gods" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-advanced">Advanced</span>
+            </div>
+            <h3>Is the Trinity Three Gods?</h3>
+            <p>Father, Son, and Spirit, each called God, yet Scripture insists there is only one. The objection treats "person" and "being" as the same thing. They are not.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>The Shema doesn't leave much room for interpretation. The Lord our God, the Lord is one. And yet the New Testament calls the Father God, calls the Son God, calls the Spirit God. While the Church has insisted from the start this isn't three deities. It's an easy objection to raise. But it assumes "person" and "being" mean the same thing. They don't.</p>
+            <p>The Cappadocian Fathers drew the distinction that does the real work here. <em>Ousia</em>, the one shared divine essence, and <em>hypostasis</em>, the distinct persons who each fully hold that one essence, without splitting it into thirds. This isn't a dodge dressed up in Greek. Three human beings share one human nature, and remain three distinct persons. Nobody calls that a contradiction. The difference with God is that the divine nature doesn't divide the way created natures do. So Father, Son, and Spirit each hold the whole of it, undivided, in relation to the other two.</p>
+            <p>Nothing here lands on three gods, because there aren't three beings to begin with. There's one being, existing eternally as three persons. It also doesn't collapse into one person wearing three masks, a separate error the Church rejected just as firmly, centuries ago. The doctrine is genuinely hard. And it should be. It's describing something with no exact parallel anywhere in creation. Hard and incoherent get confused constantly in this argument. They're not the same thing.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="david-census" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>Who Incited David to Take the Census, God or Satan</h3>
+            <p>2 Samuel says the Lord moved David to count Israel. Chronicles says Satan did. Both books can be right at once, and the reason why says something about how providence actually works.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>2 Samuel says the Lord's anger moved David to count Israel. 1 Chronicles, telling the same story, says it was Satan. Read as two competing claims about who's responsible, it looks like a straightforward contradiction between two history books. Read as two levels of causation on the same event, it's fairly ordinary biblical language.</p>
+            <p>Scripture does this elsewhere too. Describes God permitting, or standing behind, something a hostile agent carries out. Without making God the author of the evil itself. Israel had sinned, and 2 Samuel frames what follows as judgment God allowed to unfold through Satan tempting David. The same structure you see in Job, where Satan does the acting, and God is the one who permits it within limits he sets. Chronicles, written later, and more interested in naming exactly who tempted David, just names the closer cause instead of the one standing behind it.</p>
+            <p>It reads less like a contradiction, and more like two focal lengths pointed at the same scene. One book showing the judgment behind it. The other naming the tempter inside it. Ancient Israelite writers didn't treat divine permission and human agency as mutually exclusive things that had to be reported one at a time. There's no reason a modern reader has to either.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="women-tomb" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>How Many Women Were at the Tomb</h3>
+            <p>Matthew names two, Mark names three, Luke leaves it open, John names one. This is exactly what independent eyewitness testimony looks like.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Matthew names two women. Mark adds a third. Luke leaves the count open. John narrows it down to one. Skeptics treat this as proof the resurrection accounts can't agree on a basic headcount. Let alone the bigger claim.</p>
+            <p>None of the four Gospels claims to be giving a complete list. Once you notice that, the "discrepancy" mostly stops looking like one. Each writer names whoever mattered to the part of the story he's telling. John's narrow focus on Mary Magdalene makes sense once you see he's tracking her specific movements, running to tell Peter and John, rather than cataloguing everyone present. That's what independent recollection of a chaotic morning tends to look like. Different people noticing and mentioning different things.</p>
+            <p>If all four accounts had listed the exact same names, in the exact same order, that would be more suspicious. More like one coordinated story than several people remembering the same event from their own angle. Historians and legal scholars generally treat this kind of partial overlap as a sign of authenticity, not a flaw. Which, if you think about how memory actually works, tracks.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="changes-mind" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>Does God Change His Mind</h3>
+            <p>Numbers says God does not change his mind like a man. Genesis says he regretted making humanity. Both are true, and the difference is what kind of language each one is using.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Numbers 23:19 says flatly that God isn't a man, that he shouldn't change his mind. Genesis 6:6 says he regretted making humanity. Exodus 32:14 says he relented from the disaster he'd promised. Put those next to each other, and one of them looks like it's ruling out exactly what the other two describe.</p>
+            <p>The classical answer leans on divine immutability, plus a careful look at what these passages are doing. Numbers is making a point about God's faithfulness to his promises, regardless of circumstance. That's what "doesn't change his mind" is guarding. The regret and relenting language in Genesis and Exodus describes God's unchanging character responding differently to changed human behavior. Not unlike a just judge handing down a different verdict to someone who's genuinely turned around. Without the judge himself becoming a different person in the process.</p>
+            <p>Scripture leans on human language, anger, regret, relenting, so finite readers can grasp how God's unchanging holiness meets a world that does change. That isn't evasive. It's a real theological distinction, between God's essence, which can't change because it isn't made of parts that could rearrange, and his relational posture toward creatures acting in time, which looks different depending on what they do.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="ot-nt-god" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-beginner">Beginner</span>
+            </div>
+            <h3>Is the God of the Old Testament Different from the God of the New Testament</h3>
+            <p>Wrath and judgment on one side, love and mercy on the other. The contrast is real, but it isn't the split it first appears to be.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>This one comes up constantly, and it isn't a bad faith objection. The Old Testament has conquest narratives, harsh judgments, commands that are genuinely hard to sit with. The New Testament centers a Jesus who preaches loving your enemies. At a glance, it can look like two different characters sharing a name.</p>
+            <p>The pattern falls apart once you read past the highlight reel of either testament. The Old Testament is loaded with tenderness. <span class="verse">"As a father shows compassion to his children, so the Lord shows compassion,"</span> straight out of Psalm 103. Or the whole book of Hosea, built around God chasing after an unfaithful people. The New Testament isn't short on judgment either. Jesus talks about hell more than anyone else in it. Flips tables in the temple. Revelation describes judgment in some of the starkest language in the whole Bible. Both testaments hold love and justice together the entire time. They just shift the emphasis, depending on where you are in the story.</p>
+            <p>Both testaments read as one continuous unfolding of who God is. Not a character swap partway through. The severity in certain Old Testament passages sits inside a specific covenant moment, God forming and protecting a particular people at a particular point in the story. While the New Testament fills in the picture that was there the whole time. I won't pretend that fully dissolves the discomfort some of these passages create. It doesn't. Not every hard question here gets a tidy answer.</p>
+          </div>
+        </div>
+      </article>
+<article class="essay glass reveal" id="jesus-claim-god" data-category="contradiction">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Contradiction</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>Did Jesus Ever Actually Claim to Be God</h3>
+            <p>He never says the exact words "I am God" in the Gospels. The claim shows up in other ways, and the people around him clearly understood it.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>It's true. Jesus never says the literal sentence "I am God" in any Gospel. Some people take that as proof the claim to divinity got added later by his followers. The stronger evidence runs the other way. Through what he actually did, and how the people standing right there reacted to it.</p>
+            <p>In Mark 2, Jesus tells a paralyzed man his sins are forgiven. The religious leaders in the room immediately object, since only God can forgive sins. Jesus doesn't walk that back. He heals the man specifically, to back up the authority they're objecting to. In John 8:58 he says <span class="verse">"before Abraham was, I am,"</span> lifting God's own self identification to Moses word for word. The crowd responds by reaching for stones, the standard reaction to blasphemy under the law. At his trial in Mark 14, asked point blank whether he's the Christ, he answers with language pulled from Daniel 7. Which the entire Sanhedrin treats as blasphemy worth killing him over.</p>
+            <p>None of that needs the exact phrase "I am God" to make the point. The people in the room, who understood their own law and scripture far better than most modern readers do, reacted every time as though he was making exactly that claim. And reacted like it mattered enough to kill over. Whether the claim was true is a separate question from whether it was made. I think the case that it was made is strong. Whatever conclusion you draw from it after that.</p>
+          </div>
+        </div>
+      </article>
+          </div>
+        </section>
+
+        <section class="lib-section" id="metaphysics">
+          <div class="lib-section-head reveal">
+            <h2>Metaphysics</h2>
+            <p>The deeper questions behind belief. God, freedom, evil, and being itself.</p>
+          </div>
+          <div class="essay-list">
+<article class="essay glass reveal" id="problem-of-evil" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -196,78 +546,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 2 -->
-      <article class="essay glass reveal" id="creation-accounts" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>Two Creation Accounts: Genesis 1 and Genesis 2</h3>
-            <p>Skeptics point to two orders of creation in the opening chapters of Genesis as proof of an editorial mistake. The genres involved say otherwise.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Genesis 1 lays out six days, ending with man and woman created together. Genesis 2 slows down on day six specifically. Man formed first, then animals, then the woman. Read as two attempts at the same timeline, and it looks like a contradiction. Read as two different jobs, and the tension mostly disappears.</p>
-            <p>Genesis 1 is a structured overview. Built around a deliberate pattern of forming and filling, which ancient audiences would have recognized as literary structure, not a strict timeline. Genesis 2 narrows in on the garden specifically. It's interested in something different, how humanity relates to the earth, to each other, and to God. There's also a grammar point worth knowing. The Hebrew in 2:19, usually translated God <span class="verse">"formed"</span> the animals, can just as legitimately be read as a pluperfect, <span class="verse">"had formed."</span> Which removes the sequencing problem entirely.</p>
-            <p>This isn't a rescue invented after the fact. Ancient Near Eastern writing regularly paired a broad cosmic account with a closer, thematic retelling of the same events. Genesis 1 and 2 fit that pattern. Think of it less like two competing witness statements, and more like a wide shot followed by a close up.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3 -->
-      <article class="essay glass reveal" id="judas-death" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>1 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>Judas' Death: Hanged, or Fell Headlong</h3>
-            <p>Matthew says Judas hanged himself. Acts describes him falling and bursting open. Both can be true, and probably are.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Matthew says Judas hanged himself. Acts says he fell headlong, and his body burst open. Read as two full descriptions of the same moment, they don't match. Read as two partial glimpses of the same event, they line up. If grimly.</p>
-            <p>This isn't a new harmonization. People were proposing it long before modern skepticism came along. Judas hanged himself from a tree above the Field of Blood. At some point the rope or branch gave way, sending the body down onto rocky ground, where it split open. Matthew records how he died. Acts, written by Luke, records what was found afterward. Neither writer claims to be giving the whole picture. Which means neither excludes the other.</p>
-            <p>There's a detail people skip past. The Greek in Acts 1:18 doesn't strictly say Judas performed the fall himself. It can be read as "he came to his end there," which fits a body that was already dead by hanging before it came down. Two witnesses describing different stages of the same event is a far simpler explanation than a fabricated legend. Because simpler explanations tend to be the true ones.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4 -->
-      <article class="essay glass reveal" id="genealogies" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag">Intermediate</span>
-            </div>
-            <h3>The Two Genealogies of Christ</h3>
-            <p>Matthew and Luke trace different fathers back from Joseph. First century genealogical convention explains why.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Matthew traces Jesus back through Solomon. Luke traces him back through Nathan, a different son of David. The names in between don't match at all. Critics call it a fabrication and move on. The oldest Christian answer is simpler. The two writers were never trying to trace the same line.</p>
-            <p>Matthew is writing for a Jewish audience, building a legal case for kingship. So he follows the royal succession through Solomon, exactly the record a first century reader would expect for a throne claim. Luke is after something else, an actual line of physical descent. The early historian Africanus records a tradition, older than any modern critic, that Luke's genealogy runs through Mary. With Joseph listed under her line, because Jewish records were kept patrilineally.</p>
-            <p>You don't need to land on one exact mechanism to see the pattern was normal for the period. Jewish genealogies routinely served legal or thematic purposes rather than strict biology. Skipping names, or following adopted lines, when the point called for it. Two lists disagreeing on names is only a contradiction if both are claiming to do the same job. Neither Gospel says they are.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5 -->
-      <article class="essay glass reveal" id="free-will" data-category="metaphysics">
+<article class="essay glass reveal" id="free-will" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -288,9 +567,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 6 -->
-      <article class="essay glass reveal" id="essence-energies" data-category="metaphysics">
+<article class="essay glass reveal" id="essence-energies" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -311,101 +588,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 7 -->
-      <article class="essay glass reveal" id="three-gods" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-advanced">Advanced</span>
-            </div>
-            <h3>Is the Trinity Three Gods?</h3>
-            <p>Father, Son, and Spirit, each called God, yet Scripture insists there is only one. The objection treats "person" and "being" as the same thing. They are not.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>The Shema doesn't leave much room for interpretation. The Lord our God, the Lord is one. And yet the New Testament calls the Father God, calls the Son God, calls the Spirit God. While the Church has insisted from the start this isn't three deities. It's an easy objection to raise. But it assumes "person" and "being" mean the same thing. They don't.</p>
-            <p>The Cappadocian Fathers drew the distinction that does the real work here. <em>Ousia</em>, the one shared divine essence, and <em>hypostasis</em>, the distinct persons who each fully hold that one essence, without splitting it into thirds. This isn't a dodge dressed up in Greek. Three human beings share one human nature, and remain three distinct persons. Nobody calls that a contradiction. The difference with God is that the divine nature doesn't divide the way created natures do. So Father, Son, and Spirit each hold the whole of it, undivided, in relation to the other two.</p>
-            <p>Nothing here lands on three gods, because there aren't three beings to begin with. There's one being, existing eternally as three persons. It also doesn't collapse into one person wearing three masks, a separate error the Church rejected just as firmly, centuries ago. The doctrine is genuinely hard. And it should be. It's describing something with no exact parallel anywhere in creation. Hard and incoherent get confused constantly in this argument. They're not the same thing.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 8 -->
-      <article class="essay glass reveal" id="david-census" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>Who Incited David to Take the Census, God or Satan</h3>
-            <p>2 Samuel says the Lord moved David to count Israel. Chronicles says Satan did. Both books can be right at once, and the reason why says something about how providence actually works.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>2 Samuel says the Lord's anger moved David to count Israel. 1 Chronicles, telling the same story, says it was Satan. Read as two competing claims about who's responsible, it looks like a straightforward contradiction between two history books. Read as two levels of causation on the same event, it's fairly ordinary biblical language.</p>
-            <p>Scripture does this elsewhere too. Describes God permitting, or standing behind, something a hostile agent carries out. Without making God the author of the evil itself. Israel had sinned, and 2 Samuel frames what follows as judgment God allowed to unfold through Satan tempting David. The same structure you see in Job, where Satan does the acting, and God is the one who permits it within limits he sets. Chronicles, written later, and more interested in naming exactly who tempted David, just names the closer cause instead of the one standing behind it.</p>
-            <p>It reads less like a contradiction, and more like two focal lengths pointed at the same scene. One book showing the judgment behind it. The other naming the tempter inside it. Ancient Israelite writers didn't treat divine permission and human agency as mutually exclusive things that had to be reported one at a time. There's no reason a modern reader has to either.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 9 -->
-      <article class="essay glass reveal" id="women-tomb" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>How Many Women Were at the Tomb</h3>
-            <p>Matthew names two, Mark names three, Luke leaves it open, John names one. This is exactly what independent eyewitness testimony looks like.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Matthew names two women. Mark adds a third. Luke leaves the count open. John narrows it down to one. Skeptics treat this as proof the resurrection accounts can't agree on a basic headcount. Let alone the bigger claim.</p>
-            <p>None of the four Gospels claims to be giving a complete list. Once you notice that, the "discrepancy" mostly stops looking like one. Each writer names whoever mattered to the part of the story he's telling. John's narrow focus on Mary Magdalene makes sense once you see he's tracking her specific movements, running to tell Peter and John, rather than cataloguing everyone present. That's what independent recollection of a chaotic morning tends to look like. Different people noticing and mentioning different things.</p>
-            <p>If all four accounts had listed the exact same names, in the exact same order, that would be more suspicious. More like one coordinated story than several people remembering the same event from their own angle. Historians and legal scholars generally treat this kind of partial overlap as a sign of authenticity, not a flaw. Which, if you think about how memory actually works, tracks.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="essay glass reveal" id="changes-mind" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag">Intermediate</span>
-            </div>
-            <h3>Does God Change His Mind</h3>
-            <p>Numbers says God does not change his mind like a man. Genesis says he regretted making humanity. Both are true, and the difference is what kind of language each one is using.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Numbers 23:19 says flatly that God isn't a man, that he shouldn't change his mind. Genesis 6:6 says he regretted making humanity. Exodus 32:14 says he relented from the disaster he'd promised. Put those next to each other, and one of them looks like it's ruling out exactly what the other two describe.</p>
-            <p>The classical answer leans on divine immutability, plus a careful look at what these passages are doing. Numbers is making a point about God's faithfulness to his promises, regardless of circumstance. That's what "doesn't change his mind" is guarding. The regret and relenting language in Genesis and Exodus describes God's unchanging character responding differently to changed human behavior. Not unlike a just judge handing down a different verdict to someone who's genuinely turned around. Without the judge himself becoming a different person in the process.</p>
-            <p>Scripture leans on human language, anger, regret, relenting, so finite readers can grasp how God's unchanging holiness meets a world that does change. That isn't evasive. It's a real theological distinction, between God's essence, which can't change because it isn't made of parts that could rearrange, and his relational posture toward creatures acting in time, which looks different depending on what they do.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 11 -->
-      <article class="essay glass reveal" id="contingency-argument" data-category="metaphysics">
+<article class="essay glass reveal" id="contingency-argument" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -426,79 +609,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 12 -->
-      <article class="essay glass reveal" id="resurrection-witnesses" data-category="evidence">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Evidence</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 min read</span>
-              <span class="diff-tag">Intermediate</span>
-            </div>
-            <h3>The Witnesses to the Resurrection: What the Evidence Can and Can't Show</h3>
-            <p>Paul says 500 people saw the risen Jesus at once. No source outside the Bible confirms it. Here's an honest look at what that objection does and doesn't prove.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Paul writes that the risen Jesus appeared to more than 500 people at once. He adds that most of them were still alive when he wrote it down. Skeptics point out, correctly, that nothing outside the New Testament confirms this happened. That's a fair observation.</p>
-            <p>Here's the thing though. "No outside corroboration" describes a huge share of what historians otherwise treat as settled about the ancient world. Most of what's accepted about Hannibal or Alexander the Great rests on a single surviving tradition, written decades or centuries later, drawing on earlier sources that no longer exist. Paul's letter is unusually early by comparison. Written maybe two decades out. The creed embedded inside it is dated by plenty of scholars, including ones with no religious stake in the outcome, to within a few years of the crucifixion itself.</p>
-            <p>It's also worth asking what kind of record would have caught this, even if it happened exactly as described. Roman administration wasn't logging the religious experiences of a few hundred provincial Galileans. Rome doesn't mention Christians at all until decades later. And even then, only in passing, in the context of unrest or executions. Not to weigh in on specific claims the movement was making about itself. Expecting a surviving Roman record here means expecting a kind of documentation that didn't exist for anyone, in this period, for events like this.</p>
-            <p>None of that turns the claim into proof. What's left is one early, specific source naming living witnesses. With nothing independently confirming it, and nothing independently contradicting it either. That's thinner evidence than a Roman census record would be. I think it's honest to treat it that way. One data point weighed alongside everything else. Not a knockdown argument on its own.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 13 -->
-      <article class="essay glass reveal" id="ot-nt-god" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>Is the God of the Old Testament Different from the God of the New Testament</h3>
-            <p>Wrath and judgment on one side, love and mercy on the other. The contrast is real, but it isn't the split it first appears to be.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>This one comes up constantly, and it isn't a bad faith objection. The Old Testament has conquest narratives, harsh judgments, commands that are genuinely hard to sit with. The New Testament centers a Jesus who preaches loving your enemies. At a glance, it can look like two different characters sharing a name.</p>
-            <p>The pattern falls apart once you read past the highlight reel of either testament. The Old Testament is loaded with tenderness. <span class="verse">"As a father shows compassion to his children, so the Lord shows compassion,"</span> straight out of Psalm 103. Or the whole book of Hosea, built around God chasing after an unfaithful people. The New Testament isn't short on judgment either. Jesus talks about hell more than anyone else in it. Flips tables in the temple. Revelation describes judgment in some of the starkest language in the whole Bible. Both testaments hold love and justice together the entire time. They just shift the emphasis, depending on where you are in the story.</p>
-            <p>Both testaments read as one continuous unfolding of who God is. Not a character swap partway through. The severity in certain Old Testament passages sits inside a specific covenant moment, God forming and protecting a particular people at a particular point in the story. While the New Testament fills in the picture that was there the whole time. I won't pretend that fully dissolves the discomfort some of these passages create. It doesn't. Not every hard question here gets a tidy answer.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 14 -->
-      <article class="essay glass reveal" id="jesus-claim-god" data-category="contradiction">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Contradiction</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag">Intermediate</span>
-            </div>
-            <h3>Did Jesus Ever Actually Claim to Be God</h3>
-            <p>He never says the exact words "I am God" in the Gospels. The claim shows up in other ways, and the people around him clearly understood it.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>It's true. Jesus never says the literal sentence "I am God" in any Gospel. Some people take that as proof the claim to divinity got added later by his followers. The stronger evidence runs the other way. Through what he actually did, and how the people standing right there reacted to it.</p>
-            <p>In Mark 2, Jesus tells a paralyzed man his sins are forgiven. The religious leaders in the room immediately object, since only God can forgive sins. Jesus doesn't walk that back. He heals the man specifically, to back up the authority they're objecting to. In John 8:58 he says <span class="verse">"before Abraham was, I am,"</span> lifting God's own self identification to Moses word for word. The crowd responds by reaching for stones, the standard reaction to blasphemy under the law. At his trial in Mark 14, asked point blank whether he's the Christ, he answers with language pulled from Daniel 7. Which the entire Sanhedrin treats as blasphemy worth killing him over.</p>
-            <p>None of that needs the exact phrase "I am God" to make the point. The people in the room, who understood their own law and scripture far better than most modern readers do, reacted every time as though he was making exactly that claim. And reacted like it mattered enough to kill over. Whether the claim was true is a separate question from whether it was made. I think the case that it was made is strong. Whatever conclusion you draw from it after that.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 15 -->
-      <article class="essay glass reveal" id="morality-without-god" data-category="metaphysics">
+<article class="essay glass reveal" id="morality-without-god" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -519,81 +630,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 16 -->
-      <article class="essay glass reveal" id="what-is-the-trinity" data-category="orthodoxy-101">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Orthodoxy 101</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>What Is the Trinity?</h3>
-            <p>Not three gods. Not one person wearing three masks. The plain explanation, before getting into the objections.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>One God. Three persons. Father, Son, and Holy Spirit. Each fully God, not a third of God each. Not three separate gods working together, and not one person switching between three roles. That's the doctrine in a sentence. The rest is unpacking what that sentence actually means.</p>
-            <p>It doesn't come from a single proof-text. It comes from a pattern running through the whole New Testament. Jesus baptizes in the name of the Father, the Son, and the Holy Spirit, one name, three persons named inside it. The Spirit is called God. The Son is called God. The Father is called God. The Church didn't invent this pattern at Nicaea in 325, it inherited it, and Nicaea, then Constantinople in 381, gave it precise, defensible language.</p>
-            <p>That language matters. <em>Ousia</em> is the one shared divine essence. <em>Hypostasis</em> is each distinct person. The Cappadocian Fathers, Basil, Gregory Nazianzen, Gregory of Nyssa, worked out this vocabulary specifically so the Church could say "three" and "one" without contradicting itself.</p>
-            <p>If you're wondering whether this collapses into tritheism, the essay on this site titled "Is the Trinity Three Gods?" takes that objection on directly. This one is just the plain version, for anyone meeting the doctrine for the first time.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 17 -->
-      <article class="essay glass reveal" id="early-church-belief" data-category="orthodoxy-101">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Orthodoxy 101</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>What Did the Early Church Believe?</h3>
-            <p>Before the creeds were written down formally, what were Christians actually doing and teaching. The earliest sources answer this directly.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>The earliest Christian writing outside the New Testament gives a fairly clear picture. The Didache, written around 100 AD, lays out baptism, fasting, and how the Eucharist should be conducted. It reads like an operating manual for a church that already knew exactly what it was doing.</p>
-            <p>St. Ignatius of Antioch, writing letters on his way to martyrdom just a few years later, treats the Eucharist as a real participation in Christ, not a symbolic reenactment, and treats the local bishop as the center of unity in each community. Neither of these ideas shows up as something new being introduced. They show up as something already assumed, already normal, worth restating only because false teaching was starting to challenge it.</p>
-            <p>The formal creeds came later, Nicaea in 325, Constantinople in 381, but they weren't inventing belief from scratch. They were putting precise, defensible language around what communities were already practicing and confessing. Continuity, not innovation, is the actual pattern in the earliest sources.</p>
-            <p>The <a href="library.html#documents">Library page</a> has more on the Didache and the other primary documents from this period, if you want to go straight to the sources.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 18 -->
-      <article class="essay glass reveal" id="why-venerate-icons" data-category="orthodoxy-101">
-        <div class="essay-head">
-          <div class="essay-head-text">
-            <div class="essay-meta-row">
-              <span class="tag">Orthodoxy 101</span>
-              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
-              <span class="diff-tag diff-beginner">Beginner</span>
-            </div>
-            <h3>Why Do Orthodox Christians Venerate Icons?</h3>
-            <p>It looks like worship of an image from the outside. The actual theology draws a much sharper line than it first appears.</p>
-          </div>
-          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-        </div>
-        <div class="essay-body">
-          <div class="essay-body-inner">
-            <p>Veneration and worship are not the same act, and Orthodox theology has always insisted on keeping them separate. Worship, <em>latria</em>, belongs to God alone. Veneration, <em>proskynesis</em>, is the honor given to an icon, which passes through the image to the person it depicts. Kissing an icon of a saint is closer to kissing a photograph of someone you love than it is to worshipping a painted board.</p>
-            <p>The theological case for icons at all rests on the Incarnation specifically. God became visible and material in Christ. Once that happened, depicting Christ, and the saints who reflect him, became theologically appropriate rather than a violation of the command against graven images. That command was given before God took on a visible human body. Everything changed once he did.</p>
-            <p>This wasn't settled without a fight. The Iconoclast controversy ran roughly from 726 to 843, with entire periods where icons were banned and destroyed by imperial order. St. John of Damascus wrote the defense that carried the argument, and the Second Council of Nicaea in 787 restored icon veneration as legitimate. The final resolution in 843 is still celebrated in Orthodox worship today as the Triumph of Orthodoxy.</p>
-            <p>St. John of Damascus has a fuller profile on the <a href="library.html#philosophers">Library page</a>, alongside the rest of that controversy's timeline.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 19 -->
-      <article class="essay glass reveal" id="argument-from-motion" data-category="metaphysics">
+<article class="essay glass reveal" id="argument-from-motion" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -615,9 +652,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 20 -->
-      <article class="essay glass reveal" id="argument-from-efficient-cause" data-category="metaphysics">
+<article class="essay glass reveal" id="argument-from-efficient-cause" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -639,9 +674,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 21 -->
-      <article class="essay glass reveal" id="ontological-argument" data-category="metaphysics">
+<article class="essay glass reveal" id="ontological-argument" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -663,9 +696,7 @@
           </div>
         </div>
       </article>
-
-      <!-- 22 -->
-      <article class="essay glass reveal" id="teleological-argument" data-category="metaphysics">
+<article class="essay glass reveal" id="teleological-argument" data-category="metaphysics">
         <div class="essay-head">
           <div class="essay-head-text">
             <div class="essay-meta-row">
@@ -687,7 +718,85 @@
           </div>
         </div>
       </article>
+      <article class="essay glass reveal" id="kalam-cosmological-argument" data-category="metaphysics">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Metaphysics</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag diff-advanced">Advanced</span>
+            </div>
+            <h3>The Kalam Cosmological Argument</h3>
+            <p>Two premises, ancient roots, and a surprising amount of modern physics backing it up.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>The argument has a simple structure. Whatever begins to exist has a cause. The universe began to exist. Therefore the universe has a cause. Two premises, one conclusion. All the actual work happens in defending each premise, not in the logic connecting them.</p>
+            <p>The first premise leans on something close to universal intuition and universal practice. Nothing in ordinary experience pops into existence uncaused out of absolutely nothing, and science itself assumes this every time it looks for a cause behind an observed effect. Denying it outright, that the universe could have popped into being from nothing at all, for no reason, asks for a bigger exception than most people are willing to grant.</p>
+            <p>The second premise leans on two lines of support. The Big Bang model, covered on the Glossary page, points to a universe with a finite past rather than an infinite one. And there's a separate philosophical argument against an actually infinite past existing in reality at all, that traversing an infinite number of prior moments to arrive at today runs into the same paradoxes that show up whenever actual infinities get treated as real, countable things rather than useful abstractions.</p>
+            <p>Granting both premises gets you a cause that is timeless, spaceless, and immensely powerful, since it brought all of space, time, and matter into being. It doesn't hand you a personal God automatically. But there's a further move worth knowing: a purely mechanical, impersonal cause with all its conditions eternally in place should produce its effect eternally too, not suddenly at a specific moment. A free, personal cause choosing to act explains the sudden beginning far more naturally than an impersonal one does.</p>
+          </div>
+        </div>
+      </article>
+          </div>
+        </section>
 
+        <section class="lib-section" id="evidence">
+          <div class="lib-section-head reveal">
+            <h2>Evidence</h2>
+            <p>What the historical record can and can't actually support.</p>
+          </div>
+          <div class="essay-list">
+<article class="essay glass reveal" id="resurrection-witnesses" data-category="evidence">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Evidence</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>The Witnesses to the Resurrection: What the Evidence Can and Can't Show</h3>
+            <p>Paul says 500 people saw the risen Jesus at once. No source outside the Bible confirms it. Here's an honest look at what that objection does and doesn't prove.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Paul writes that the risen Jesus appeared to more than 500 people at once. He adds that most of them were still alive when he wrote it down. Skeptics point out, correctly, that nothing outside the New Testament confirms this happened. That's a fair observation.</p>
+            <p>Here's the thing though. "No outside corroboration" describes a huge share of what historians otherwise treat as settled about the ancient world. Most of what's accepted about Hannibal or Alexander the Great rests on a single surviving tradition, written decades or centuries later, drawing on earlier sources that no longer exist. Paul's letter is unusually early by comparison. Written maybe two decades out. The creed embedded inside it is dated by plenty of scholars, including ones with no religious stake in the outcome, to within a few years of the crucifixion itself.</p>
+            <p>It's also worth asking what kind of record would have caught this, even if it happened exactly as described. Roman administration wasn't logging the religious experiences of a few hundred provincial Galileans. Rome doesn't mention Christians at all until decades later. And even then, only in passing, in the context of unrest or executions. Not to weigh in on specific claims the movement was making about itself. Expecting a surviving Roman record here means expecting a kind of documentation that didn't exist for anyone, in this period, for events like this.</p>
+            <p>None of that turns the claim into proof. What's left is one early, specific source naming living witnesses. With nothing independently confirming it, and nothing independently contradicting it either. That's thinner evidence than a Roman census record would be. I think it's honest to treat it that way. One data point weighed alongside everything else. Not a knockdown argument on its own.</p>
+          </div>
+        </div>
+      </article>
+      <article class="essay glass reveal" id="bodily-resurrection" data-category="evidence">
+        <div class="essay-head">
+          <div class="essay-head-text">
+            <div class="essay-meta-row">
+              <span class="tag">Evidence</span>
+              <span class="read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>2 min read</span>
+              <span class="diff-tag">Intermediate</span>
+            </div>
+            <h3>Did Jesus Rise Bodily, or Just Spiritually?</h3>
+            <p>A separate objection from the 500 witnesses question. This one grants an experience happened, and argues about what kind.</p>
+          </div>
+          <div class="essay-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="essay-body">
+          <div class="essay-body-inner">
+            <p>Some skeptics grant that the disciples had some kind of experience after Jesus' death, but argue it was a vision or a spiritual encounter, not an actual body getting up and walking around. This is a real, more careful objection than outright denial, and it deserves a real answer rather than an assumption that "resurrection" obviously means physical.</p>
+            <p>The empty tomb is the first problem for a purely spiritual reading. If the disciples only had visions, Jesus' body should still have been sitting in the tomb, easily produced by Jerusalem authorities to shut the whole movement down immediately. Nobody ever produced it. A checkable, physical claim that nobody could disprove by simply pointing to a body is a very different situation than an unfalsifiable private vision.</p>
+            <p>The Gospel accounts also go out of their way to stress physicality, not just presence. The risen Jesus eats a piece of fish in front of the disciples in Luke 24. He invites Thomas to touch the wounds directly in John 20. This isn't a ghost story. At the same time, he also appears in locked rooms and vanishes from sight, so whatever this body is, it's transformed, not merely resuscitated back to ordinary biological life.</p>
+            <p>Paul's language in 1 Corinthians 15 sometimes gets read as support for a non-physical resurrection, since he calls it a spiritual body. But in Paul's actual usage, spiritual describes what animates something, governed by the Spirit, not what it's made of. He's contrasting it with a natural body, one animated by ordinary human life. A transformed physical body fits Paul's own language better than a bodiless spirit does.</p>
+          </div>
+        </div>
+      </article>
+          </div>
+        </section>
+
+      </div>
     </div>
   </div>
 </section>
