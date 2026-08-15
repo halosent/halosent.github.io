@@ -350,6 +350,20 @@ section{ position: relative; }
   margin-bottom: 10px;
 }
 .discord-cta p{ color: var(--ink-soft); max-width: 52ch; margin: 0 auto 24px; }
+.discord-notice{
+  max-width: 48ch;
+  margin: 0 auto 20px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: var(--gold-pale);
+  border: 1px solid var(--glass-border);
+}
+.discord-notice p{
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.discord-notice strong{ color: var(--ink); }
 .social-row{
   display:flex;
   justify-content:center;
