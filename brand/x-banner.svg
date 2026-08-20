@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f2"/>
+      <stop offset="55%" stop-color="#f6f2e9"/>
+      <stop offset="100%" stop-color="#f1ecdf"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e3c07f" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e3c07f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#a9812f" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#a9812f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <circle cx="120" cy="80" r="260" fill="url(#glowL)"/>
+  <circle cx="1420" cy="460" r="300" fill="url(#glowR)"/>
+
+  <!-- faint outer rings echoing the site emblem -->
+  <circle cx="250" cy="250" r="190" fill="none" stroke="#a9812f" stroke-width="1" opacity="0.22"/>
+  <circle cx="250" cy="250" r="150" fill="none" stroke="#a9812f" stroke-width="1" stroke-dasharray="1 9" opacity="0.3"/>
+
+  <!-- cross mark -->
+  <g stroke="#a9812f" stroke-linecap="round">
+    <line x1="250" y1="150" x2="250" y2="350" stroke-width="11"/>
+    <line x1="192" y1="192" x2="308" y2="192" stroke-width="11"/>
+    <line x1="164" y1="250" x2="336" y2="250" stroke-width="11"/>
+    <line x1="204" y1="304" x2="292" y2="322" stroke-width="11"/>
+  </g>
+  <circle cx="250" cy="150" r="5" fill="#a9812f"/>
+  <circle cx="250" cy="350" r="5" fill="#a9812f"/>
+  <circle cx="164" cy="250" r="5" fill="#a9812f"/>
+  <circle cx="336" cy="250" r="5" fill="#a9812f"/>
+
+  <!-- wordmark -->
+  <text x="500" y="245" font-family="Georgia, 'Times New Roman', serif" font-size="92">
+    <tspan font-weight="600" fill="#211d19">Live </tspan><tspan font-weight="400" font-style="italic" fill="#4b433a">Orthodox</tspan>
+  </text>
+  <text x="504" y="295" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" fill="#a9812f">ANSWERING THE HARD QUESTIONS</text>
+
+  <line x1="504" y1="330" x2="900" y2="330" stroke="#a9812f" stroke-width="1" opacity="0.35"/>
+  <text x="504" y="368" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#5f4c30">An Orthodox belief community</text>
+</svg>
