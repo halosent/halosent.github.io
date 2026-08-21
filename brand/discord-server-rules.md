@@ -1,4 +1,4 @@
-# Live Orthodox — Server Rules
+# Live Orthodox, Server Rules
 
 Post this in `#welcome` or `#debate-rules`. A short pin version is at the bottom.
 
@@ -20,15 +20,15 @@ Debate channels carry a higher bar than general chat.
 
 **Steelman before you respond.** Engage the strongest version of the other side's argument, not the weakest.
 
-**Cite your sources.** Verses, translations, historical claims, and quotes should say where they're from.
+**Cite your sources.** Verses, translations, historical claims, and quotes should say where they are from.
 
 **Stay on topic** within a thread, and take unrelated arguments to the right channel.
 
-**No bad faith arguing.** Repeating a claim after it's been directly answered, without addressing the rebuttal, isn't debate.
+**No bad faith arguing.** Repeating a claim after it is been directly answered, without addressing the rebuttal, is not debate.
 
 ## 3. Roles
 
-**Verified Debater** is opt-in for the debate channels, granted after agreeing to these rules. **Contributor** goes to site writers and trusted regulars, and isn't automatic.
+**Verified Debater** is opt-in for the debate channels, granted after agreeing to these rules. **Contributor** goes to site writers and trusted regulars, and is not automatic.
 
 ## 4. Moderation
 
