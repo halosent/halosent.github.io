@@ -1,0 +1,379 @@
+// Live Orthodox — shared behaviour
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // page loader
+  const loader = document.getElementById('pageLoader');
+  if (loader) {
+    let alreadySeen = false;
+    try { alreadySeen = sessionStorage.getItem('lo_loader_seen') === 'true'; } catch (e) {}
+    if (alreadySeen) {
+      loader.classList.add('hidden');
+    } else {
+      const minDisplay = new Promise(resolve => setTimeout(resolve, 650));
+      const pageLoaded = new Promise(resolve => {
+        if (document.readyState === 'complete') resolve();
+        else window.addEventListener('load', resolve, { once: true });
+      });
+      Promise.all([minDisplay, pageLoaded]).then(() => {
+        loader.classList.add('hidden');
+        try { sessionStorage.setItem('lo_loader_seen', 'true'); } catch (e) {}
+      });
+    }
+  }
+
+  // dark mode toggle
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('lo_theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('lo_theme', 'dark');
+      }
+    });
+  }
+
+  // announcement bar dismiss
+  const bar = document.getElementById('announcementBar');
+  const closeBtn = document.getElementById('announcementClose');
+  if (bar && closeBtn) {
+    if (localStorage.getItem('lo_announcement_dismissed') === 'true') {
+      bar.style.display = 'none';
+    }
+    closeBtn.addEventListener('click', () => {
+      bar.style.display = 'none';
+      localStorage.setItem('lo_announcement_dismissed', 'true');
+    });
+  }
+
+  // mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+  }
+
+  // dropdown nav menus
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('open');
+      dropdowns.forEach(d => d.classList.remove('open'));
+      if (!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', () => {
+    dropdowns.forEach(d => d.classList.remove('open'));
+  });
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // essay accordion (articles page)
+  const essays = document.querySelectorAll('.essay');
+  essays.forEach(essay => {
+    const head = essay.querySelector('.essay-head');
+    const body = essay.querySelector('.essay-body');
+    if (!head || !body) return;
+    head.addEventListener('click', () => {
+      const isOpen = essay.classList.contains('open');
+      essays.forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.essay-body').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        essay.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 40 + 'px';
+      }
+    });
+  });
+
+  // faq accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!question || !answer) return;
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      faqItems.forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+      }
+    });
+  });
+
+  // article filter + search combined
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const essayItems = document.querySelectorAll('.essay');
+  const searchInput = document.getElementById('articleSearch');
+  const noResults = document.getElementById('noResults');
+  let activeFilter = 'all';
+
+  function applyEssayFilters() {
+    const term = (searchInput ? searchInput.value : '').trim().toLowerCase();
+    let visibleCount = 0;
+    essayItems.forEach(item => {
+      const matchesCategory = activeFilter === 'all' || item.dataset.category === activeFilter;
+      const text = item.textContent.toLowerCase();
+      const matchesSearch = term === '' || text.includes(term);
+      const show = matchesCategory && matchesSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+    if (noResults) {
+      noResults.textContent = 'No articles match your search.';
+      noResults.style.display = visibleCount === 0 ? '' : 'none';
+    }
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyEssayFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyEssayFilters);
+  }
+
+  // essay actions: copy link, share to X, download
+  const clockIconUnused = null;
+  essayItems.forEach(essay => {
+    const bodyInner = essay.querySelector('.essay-body-inner');
+    const h3 = essay.querySelector('h3');
+    if (!bodyInner || !h3) return;
+    const id = essay.id;
+    const title = h3.textContent;
+    const url = window.location.origin + window.location.pathname + '#' + id;
+    const shareText = encodeURIComponent(title + ' — Live Orthodox');
+    const shareUrl = encodeURIComponent(url);
+
+    // related articles: prefer same category, fill remaining slots from elsewhere
+    const category = essay.dataset.category;
+    const others = Array.from(essayItems).filter(e => e !== essay);
+    const sameCategory = others.filter(e => e.dataset.category === category);
+    let related = sameCategory.slice(0, 3);
+    if (related.length < 3) {
+      const rest = others.filter(e => !related.includes(e));
+      related = related.concat(rest.slice(0, 3 - related.length));
+    }
+    if (related.length) {
+      const relatedBlock = document.createElement('div');
+      relatedBlock.className = 'related-articles';
+      const linkArrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      relatedBlock.innerHTML =
+        '<h4>Related Articles</h4>' +
+        '<div class="related-links">' +
+        related.map(e => {
+          const rTitle = e.querySelector('h3') ? e.querySelector('h3').textContent : '';
+          return '<a class="related-link" href="#' + e.id + '">' + linkArrow + rTitle + '</a>';
+        }).join('') +
+        '</div>';
+      bodyInner.appendChild(relatedBlock);
+    }
+
+    const actions = document.createElement('div');
+    actions.className = 'essay-actions';
+    actions.innerHTML =
+      '<button class="essay-action-btn" data-role="copy" data-url="' + url + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007.07 0l2-2a5 5 0 00-7.07-7.07l-1 1"/><path d="M14 11a5 5 0 00-7.07 0l-2 2a5 5 0 007.07 7.07l1-1"/></svg>' +
+        '<span class="action-label">Copy link</span>' +
+      '</button>' +
+      '<a class="essay-action-btn" href="https://twitter.com/intent/tweet?url=' + shareUrl + '&text=' + shareText + '" target="_blank" rel="noopener">' +
+        '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22H16.9l-5-6.5-5.7 6.5H2l8.1-9.3L1 2h6.6l4.5 6 6.8-6zM17.7 20h1.7L7.4 3.9H5.6L17.7 20z"/></svg>' +
+        '<span class="action-label">Share</span>' +
+      '</a>' +
+      '<button class="essay-action-btn" data-role="download" data-id="' + id + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>' +
+        '<span class="action-label">Download</span>' +
+      '</button>';
+    bodyInner.appendChild(actions);
+  });
+
+  // clicking a related-article link should open that essay's accordion, not just scroll to it
+  document.querySelectorAll('.related-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      e.preventDefault();
+      essays.forEach(other => {
+        other.classList.remove('open');
+        const b = other.querySelector('.essay-body');
+        if (b) b.style.maxHeight = null;
+      });
+      target.classList.add('open');
+      const body = target.querySelector('.essay-body');
+      if (body) body.style.maxHeight = body.scrollHeight + 40 + 'px';
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + targetId);
+    });
+  });
+
+  // open the matching essay automatically if the page loads with a hash in the URL
+  if (window.location.hash) {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target && target.classList.contains('essay')) {
+      target.classList.add('open');
+      const body = target.querySelector('.essay-body');
+      if (body) {
+        body.style.maxHeight = body.scrollHeight + 40 + 'px';
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+      }
+    }
+  }
+
+  document.querySelectorAll('.essay-action-btn[data-role="copy"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.url).then(() => {
+        const label = btn.querySelector('.action-label');
+        const original = label.textContent;
+        label.textContent = 'Copied';
+        setTimeout(() => { label.textContent = original; }, 1800);
+      });
+    });
+  });
+
+  document.querySelectorAll('.essay-action-btn[data-role="download"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const essay = document.getElementById(btn.dataset.id);
+      if (!essay) return;
+      const title = essay.querySelector('h3').textContent;
+      const paras = Array.from(essay.querySelectorAll('.essay-body-inner p'))
+        .map(p => p.textContent.trim())
+        .join('\n\n');
+      const text = title + '\n\nLive Orthodox — liveorthodox.com\n\n' + paras;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = btn.dataset.id + '.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+    });
+  });
+
+  // copy email button
+  const copyBtn = document.querySelector('.copy-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const email = copyBtn.dataset.email;
+      navigator.clipboard.writeText(email).then(() => {
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied';
+        setTimeout(() => { copyBtn.textContent = original; }, 1800);
+      });
+    });
+  }
+
+  // verse lookup
+  const verseForm = document.getElementById('verseForm');
+  const verseInput = document.getElementById('verseInput');
+  const verseResult = document.getElementById('verseResult');
+
+  async function lookupVerse(ref) {
+    if (!ref || !ref.trim()) return;
+    verseResult.innerHTML = '<p class="verse-loading">Looking that up...</p>';
+    try {
+      const res = await fetch('https://bible-api.com/' + encodeURIComponent(ref.trim()));
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      if (!data || !data.text) throw new Error('not found');
+      const text = data.text.trim().replace(/\n+/g, ' ');
+      verseResult.innerHTML =
+        '<div class="verse-card">' +
+          '<div class="verse-ref">' + data.reference + '</div>' +
+          '<div class="verse-text">' + text + '</div>' +
+          '<div class="verse-translation">' + (data.translation_name || 'World English Bible') + '</div>' +
+        '</div>';
+    } catch (err) {
+      verseResult.innerHTML = '<div class="verse-error">Couldn\'t find that reference. Try a format like "John 3:16" or "Romans 8:28-30".</div>';
+    }
+  }
+
+  if (verseForm) {
+    verseForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      lookupVerse(verseInput.value);
+    });
+    document.querySelectorAll('.verse-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        verseInput.value = chip.dataset.ref;
+        lookupVerse(chip.dataset.ref);
+      });
+    });
+  }
+
+  // library page scroll-spy
+  const libToc = document.getElementById('libToc');
+  const libSections = document.querySelectorAll('.lib-section');
+  if (libToc && libSections.length) {
+    const libLinks = libToc.querySelectorAll('.lib-toc-link');
+    const setActive = (id) => {
+      libLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    };
+    if ('IntersectionObserver' in window) {
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+      libSections.forEach(section => spy.observe(section));
+    }
+    libLinks.forEach(link => {
+      link.addEventListener('click', () => setActive(link.getAttribute('href').slice(1)));
+    });
+    if (libLinks.length) setActive(libSections[0].id);
+  }
+
+  // footer subscribe (opens the email client, no mailing list service behind this yet)
+  const subscribeForm = document.getElementById('footerSubscribe');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById('footerSubscribeEmail');
+      const email = emailInput ? emailInput.value.trim() : '';
+      const subject = encodeURIComponent('Subscribe me to Live Orthodox updates');
+      const body = encodeURIComponent('Please add this address to the mailing list: ' + email);
+      window.location.href = 'mailto:contactunified@proton.me?subject=' + subject + '&body=' + body;
+    });
+  }
+
+});
