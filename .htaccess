@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^home/?$ index.html [L]
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^articles/?$ articles.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^start-here/?$ start-here.html [L]
+RewriteRule ^church-fathers/?$ church-fathers.html [L]
+RewriteRule ^library/?$ library.html [L]
+RewriteRule ^glossary/?$ glossary.html [L]
+RewriteRule ^verses/?$ verses.html [L]

@@ -35,4 +35,4 @@ The site is fully static, so it works on any static host. A few common options:
 - **Netlify or Cloudflare Pages**: drag and drop the folder onto their dashboard.
 - **GitHub Pages**: push the folder to a repository and enable Pages in the repo settings.
 
-No configuration, build tools, or database are needed for any of these.
+No build tools or database are needed. The included `_redirects` file supports Netlify and Cloudflare Pages. The included `firebase.json` supports Firebase Hosting. Upload the contents of this folder as the site root, not the parent archive folder. The `.htaccess` file supports Apache hosting.
